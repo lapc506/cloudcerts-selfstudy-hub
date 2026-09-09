@@ -95,7 +95,19 @@ export default function Sidebar({
   onNavigateWeek,
 }: SidebarProps) {
   const theme = useTheme();
-  const providers = [...new Set(catalog.map((c) => c.provider))];
+  // Orden de hyperscalers por market share (Synergy Research Group Q3 2025
+  // vía Statista: AWS 29%, Azure 20%, Google Cloud 13%). El resto conserva
+  // el orden del catálogo (sort estable).
+  const PROVIDER_RANK: Record<string, number> = {
+    AWS: 0,
+    "Microsoft Azure": 1,
+    "Google Cloud": 2,
+  };
+  const providers = [...new Set(catalog.map((c) => c.provider))].sort((a, b) => {
+    const ra = PROVIDER_RANK[a] ?? Number.MAX_SAFE_INTEGER;
+    const rb = PROVIDER_RANK[b] ?? Number.MAX_SAFE_INTEGER;
+    return ra - rb;
+  });
 
   // Árbol de navegación: guías expandidas y semanas (groups) expandidas.
   const [expandedGuides, setExpandedGuides] = useState<Set<string>>(
@@ -202,7 +214,7 @@ export default function Sidebar({
               <ListItem
                 onClick={() => toggleSection(s.key)}
                 sx={{
-                  py: 1.5,
+                  py: "1px",
                   px: 3,
                   cursor: "pointer",
                   "&:hover": { bgcolor: sidebarNavy.rowHover },
@@ -404,7 +416,7 @@ export default function Sidebar({
                   </Fragment>
                 );
               })}
-              <Divider sx={{ mt: 2, borderColor: sidebarNavy.divider }} />
+              <Divider sx={{ borderColor: sidebarNavy.divider }} />
             </Box>
           );
         })}
