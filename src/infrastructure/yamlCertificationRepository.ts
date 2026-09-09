@@ -5938,6 +5938,1489 @@ weeks:
           - "Repasar bring-up y handoff operativo."
           - "Checklist logístico del examen proctored."
 `,
+  "ali-aca-ce": `
+id: "ali-aca-ce"
+provider: "Alibaba Cloud"
+provider_color: "#FF6A00"
+title: "Alibaba Cloud Certified Associate: Cloud Engineer"
+code: "CEA-C01"
+cost: "$200 USD"
+default_priority: 2
+popularity: 3
+summary: "Credencial Associate que valida crear, configurar y gestionar recursos cloud: cómputo, red, almacenamiento y seguridad."
+meta:
+  exam_version: "Guía vigente (Associate, reemplaza a ACA Cloud Computing)"
+  guide_date: "2026-09-09"
+  guide_source: "https://edu.alibabacloud.com/certification/cloud_engineer_associate"
+  format: "50 preguntas · 90 minutos · 70/100 para aprobar · online o presencial"
+  passing_score: "70/100"
+  domains:
+    - "Compute"
+    - "Networking"
+    - "Storage"
+    - "Security and IAM"
+    - "Monitoring and Billing"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "200 · Associate"
+  career_paths:
+    - "Cloud Engineer"
+    - "Junior Solution Architect"
+  versions: []
+  verified_sources:
+    - url: "https://edu.alibabacloud.com/certification/cloud_engineer_associate"
+      date_last_fetched: "2026-09-09"
+      label: "ACA Cloud Engineer (CEA-C01) — Exam Overview"
+    - url: "https://edu.alibabacloud.com/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Alibaba Cloud Certification — catálogo y precios"
+weeks:
+  - week: 1
+    title: "Fundamentos cloud y consola Alibaba"
+    sections:
+      - domain: "Compute"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Describir regiones, zonas y modelos de pago de Alibaba Cloud."
+          - "Navegar la consola, CLI y gestionar cuotas y límites."
+          - "Crear una instancia ECS y conectarse por SSH."
+          - "Estimar costos básicos con la calculadora de precios."
+  - week: 2
+    title: "ECS y cómputo elástico"
+    sections:
+      - domain: "Compute"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Elegir familias de instancias según workload."
+          - "Configurar discos, snapshots e imágenes personalizadas."
+          - "Montar auto scaling con reglas simples."
+          - "Practicar stop/start y cambio de tipo de instancia."
+  - week: 3
+    title: "VPC y redes"
+    sections:
+      - domain: "Networking"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Diseñar VPC con vSwitches públicos y privados."
+          - "Configurar security groups y listas de acceso."
+          - "Exponer servicios con SLB y EIP."
+          - "Conectar VPCs con peering y CEN a nivel conceptual."
+  - week: 4
+    title: "Almacenamiento OSS y NAS"
+    sections:
+      - domain: "Storage"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear buckets OSS y gestionar permisos y versionado."
+          - "Montar NAS para cargas compartidas."
+          - "Aplicar lifecycle policies para abaratar storage."
+          - "Migrar un backup local a OSS como ejercicio."
+  - week: 5
+    title: "Seguridad e IAM (RAM)"
+    sections:
+      - domain: "Security and IAM"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear usuarios RAM, grupos y políticas de mínimo privilegio."
+          - "Activar MFA y rotación de credenciales."
+          - "Auditar acciones con ActionTrail."
+          - "Proteger secretos sin hardcodearlos en código."
+  - week: 6
+    title: "Bases de datos gestionadas"
+    sections:
+      - domain: "Storage"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Levantar PolarDB/RDS y configurar backups."
+          - "Conectar apps con endpoints privados."
+          - "Elegir entre relacional y NoSQL según el caso."
+          - "Probar failover y medir RTO básico."
+  - week: 7
+    title: "Monitoreo y facturación"
+    sections:
+      - domain: "Monitoring and Billing"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear alarmas en CloudMonitor para CPU y disco."
+          - "Leer la factura y detectar consumos anómalos."
+          - "Etiquetar recursos para cost allocation."
+          - "Definir presupuestos y alertas de gasto."
+  - week: 8
+    title: "Simulacro final CEA-C01"
+    sections:
+      - domain: "Compute"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 50 preguntas y repaso de fallos."
+          - "Cerrar gaps en red y seguridad RAM."
+          - "Repasar ECS, VPC y OSS a nivel conceptual."
+          - "Checklist logístico del examen."
+`,
+  "ali-acp-ca": `
+id: "ali-acp-ca"
+provider: "Alibaba Cloud"
+provider_color: "#FF6A00"
+title: "Alibaba Cloud Certified Professional: Cloud Architect"
+code: "CAP-C01"
+cost: "$200 USD"
+default_priority: 3
+popularity: 3
+summary: "Credencial Professional que valida diseñar soluciones escalables y resilientes: arquitectura, red, seguridad y migración."
+meta:
+  exam_version: "Guía vigente (Professional, reemplaza a ACP Cloud Computing)"
+  guide_date: "2026-09-09"
+  guide_source: "https://edu.alibabacloud.com/certification/cloud_architect_professional"
+  format: "50 preguntas · 90 minutos · 70/100 para aprobar · online o presencial"
+  passing_score: "70/100"
+  domains:
+    - "Architecture Design"
+    - "Network Architecture"
+    - "Security Architecture"
+    - "High Availability and Disaster Recovery"
+    - "Migration and Cost Optimization"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "Solution Architect"
+    - "Cloud Consultant"
+  versions: []
+  verified_sources:
+    - url: "https://edu.alibabacloud.com/certification/cloud_architect_professional"
+      date_last_fetched: "2026-09-09"
+      label: "ACP Cloud Architect (CAP-C01) — Exam Overview"
+    - url: "https://edu.alibabacloud.com/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Alibaba Cloud Certification — catálogo y precios"
+weeks:
+  - week: 1
+    title: "Diseño de arquitecturas de referencia"
+    sections:
+      - domain: "Architecture Design"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Mapear requisitos a servicios: cómputo, datos y red."
+          - "Separar ambientes dev/stage/prod con cuentas y RAM."
+          - "Documentar decisiones con ADRs simples."
+          - "Estimar costo total de una arquitectura propuesta."
+  - week: 2
+    title: "Red empresarial y conectividad híbrida"
+    sections:
+      - domain: "Network Architecture"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diseñar hub-and-spoke con CEN y Transit Router."
+          - "Conectar on-premises con VPN y Express Connect."
+          - "Segmentar con security groups y NACLs por capa."
+          - "Planear DNS privado y resolución híbrida."
+  - week: 3
+    title: "Seguridad en profundidad"
+    sections:
+      - domain: "Security Architecture"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Diseñar identidad federada y SSO para la organización."
+          - "Proteger APIs y apps con WAF y Anti-DDoS."
+          - "Cifrar datos en tránsito y reposo con KMS."
+          - "Auditar con ActionTrail y Config de forma continua."
+  - week: 4
+    title: "Alta disponibilidad y DR"
+    sections:
+      - domain: "High Availability and Disaster Recovery"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diseñar multi-zona con SLB y health checks."
+          - "Definir RTO/RPO y elegir estrategia backup/pilot/light."
+          - "Replicar bases de datos entre regiones."
+          - "Probar failover con game-day documentado."
+  - week: 5
+    title: "Datos y analytics a escala"
+    sections:
+      - domain: "Architecture Design"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Elegir OLTP vs OLAP vs lakehouse según el caso."
+          - "Diseñar ingesta con DataHub/Kafka y procesamiento."
+          - "Gobernar datos con catalogación y linaje básico."
+          - "Dimensionar throughput y retención."
+  - week: 6
+    title: "Migración a la nube"
+    sections:
+      - domain: "Migration and Cost Optimization"
+        weight: "10%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Evaluar 6R y elegir estrategia por workload."
+          - "Planear oleadas con dependencias y rollback."
+          - "Migrar una app de ejemplo con SMC."
+          - "Validar paridad funcional post-migración."
+  - week: 7
+    title: "Optimización de costos y gobierno"
+    sections:
+      - domain: "Migration and Cost Optimization"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Detectar recursos ociosos y rightsizing."
+          - "Combinar pay-as-you-go con reservadas donde aplique."
+          - "Etiquetar todo para chargeback por equipo."
+          - "Armar reporte mensual de savings."
+  - week: 8
+    title: "Simulacro final CAP-C01"
+    sections:
+      - domain: "Architecture Design"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 50 preguntas y repaso de fallos."
+          - "Cerrar gaps en red híbrida y seguridad."
+          - "Repasar casos de arquitectura de la guía oficial."
+          - "Checklist logístico del examen."
+`,
+  "oci-found": `
+id: "oci-found"
+provider: "Oracle"
+provider_color: "#C74634"
+title: "Oracle Cloud Infrastructure Foundations Associate"
+code: "1Z0-1085"
+cost: "Gratis · online sin supervisión"
+default_priority: 1
+popularity: 3
+summary: "Credencial Foundations gratuita que valida conceptos cloud e intro a IAM, red, cómputo y storage en OCI."
+meta:
+  exam_version: "Guía vigente (Foundations)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.oracle.com/education/certification/"
+  format: "Online sin supervisión · gratuito"
+  passing_score: "No publicado (verificar en registro)"
+  domains:
+    - "Cloud Concepts"
+    - "IAM Basics"
+    - "Networking Basics"
+    - "Compute and Storage Basics"
+    - "Observability Basics"
+  validity_years: 3
+  recert_window: "Según política de recertificación Oracle"
+  recert_options:
+    - "Repetir el examen o subir de nivel"
+  recert_discount: "Examen gratuito"
+  level: "100 · Foundations"
+  career_paths:
+    - "Cloud Beginner"
+    - "Presales Associate"
+  versions: []
+  verified_sources:
+    - url: "https://www.oracle.com/education/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Oracle Certification — catálogo y políticas"
+weeks:
+  - week: 1
+    title: "Conceptos cloud y modelo OCI"
+    sections:
+      - domain: "Cloud Concepts"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Distinguir IaaS, PaaS, SaaS y nube pública/privada."
+          - "Describir regiones, dominios de disponibilidad y realms OCI."
+          - "Explicar el modelo de responsabilidad compartida."
+          - "Navegar la consola OCI y cloud shell."
+  - week: 2
+    title: "IAM y compartimentos"
+    sections:
+      - domain: "IAM Basics"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear usuarios, grupos y políticas básicas."
+          - "Organizar recursos en compartimentos."
+          - "Aplicar principio de mínimo privilegio."
+          - "Activar MFA en cuentas administrativas."
+  - week: 3
+    title: "Redes VCN a nivel introductorio"
+    sections:
+      - domain: "Networking Basics"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear una VCN con subredes públicas y privadas."
+          - "Configurar route tables e internet gateway."
+          - "Explicar security lists vs network security groups."
+          - "Conectar una instancia a internet de forma segura."
+  - week: 4
+    title: "Cómputo y shapes"
+    sections:
+      - domain: "Compute and Storage Basics"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Lanzar una VM con shape flexible Always Free."
+          - "Distinguir VM, bare metal y contenedores."
+          - "Adjuntar block volumes y hacer backup."
+          - "Usar Object Storage para archivos y backups."
+  - week: 5
+    title: "Bases de datos y Autonomous"
+    sections:
+      - domain: "Compute and Storage Basics"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Describir Autonomous Database y sus workloads."
+          - "Crear una ADB Always Free y conectarse."
+          - "Explicar backups automáticos y scaling."
+          - "Comparar MySQL HeatWave con ADB a alto nivel."
+  - week: 6
+    title: "Observabilidad y costos"
+    sections:
+      - domain: "Observability Basics"
+        weight: "10%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Ver métricas y crear una alarma básica."
+          - "Consultar Audit logs de la tenancy."
+          - "Revisar el costo con Cost Analysis."
+          - "Configurar budgets y alertas de gasto."
+  - week: 7
+    title: "Seguridad base y compliance"
+    sections:
+      - domain: "IAM Basics"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Explicar Cloud Guard y Security Zones."
+          - "Gestionar vaults y secretos a nivel conceptual."
+          - "Describir cifrado por defecto de OCI."
+          - "Repasar principios de Zero Trust aplicados."
+  - week: 8
+    title: "Simulacro final 1Z0-1085"
+    sections:
+      - domain: "Cloud Concepts"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro de 40 preguntas y repaso de fallos."
+          - "Cerrar gaps en IAM y networking básico."
+          - "Repasar el free tier como laboratorio."
+          - "Checklist logístico del examen online."
+`,
+  "oci-arch-a": `
+id: "oci-arch-a"
+provider: "Oracle"
+provider_color: "#C74634"
+title: "Oracle Cloud Infrastructure Architect Associate"
+code: "1Z0-1072-26"
+cost: "$245 USD"
+default_priority: 3
+popularity: 4
+summary: "Credencial Associate que valida diseñar IAM, VCN, cómputo, storage y bases de datos en OCI (Pearson VUE)."
+meta:
+  exam_version: "Guía vigente 2026 (1Z0-1072-26)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.oracle.com/education/certification/"
+  format: "55 preguntas · 90 minutos · Pearson VUE online o centro"
+  passing_score: "68% (verificar en registro)"
+  domains:
+    - "Identity and Access Management"
+    - "Networking"
+    - "Compute"
+    - "Storage"
+    - "Database"
+    - "Observability and Management"
+  validity_years: 3
+  recert_window: "Según política de recertificación Oracle (3 años)"
+  recert_options:
+    - "Repetir el examen o subir a Professional"
+  recert_discount: "Sin descuento documentado"
+  level: "200 · Associate"
+  career_paths:
+    - "OCI Architect"
+    - "Cloud Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.oracle.com/education/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Oracle Certification — catálogo y políticas"
+weeks:
+  - week: 1
+    title: "IAM avanzado con identity domains"
+    sections:
+      - domain: "Identity and Access Management"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Escribir políticas IAM con condicionales y tags."
+          - "Configurar dynamic groups y resource principals."
+          - "Federar IdP externo con identity domains."
+          - "Diseñar compartimentos y quotas por equipo."
+  - week: 2
+    title: "VCN, subredes y conectividad"
+    sections:
+      - domain: "Networking"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diseñar VCN multi-subred con gateways."
+          - "Asegurar con security lists y NSGs."
+          - "Conectar con peering local/remoto y DRG."
+          - "Exponer con load balancer y DNS."
+  - week: 3
+    title: "VPN, FastConnect y tránsito"
+    sections:
+      - domain: "Networking"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Montar Site-to-Site VPN con redundancia."
+          - "Planear FastConnect para tráfico dedicado."
+          - "Enrutar tránsito hub-and-spoke con DRG."
+          - "Diagnosticar conectividad con Network Command Center."
+  - week: 4
+    title: "Cómputo: shapes y autoscaling"
+    sections:
+      - domain: "Compute"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Elegir shapes VM, bare metal y flexibles."
+          - "Crear imágenes custom y instance pools."
+          - "Configurar autoscaling con métricas."
+          - "Usar instancias preemptibles para batch."
+  - week: 5
+    title: "Object, Block y File Storage"
+    sections:
+      - domain: "Storage"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Gestionar tiers, lifecycle y versionado en Object Storage."
+          - "Dimensionar Block Volumes con performance tiers."
+          - "Montar File Storage con exports y snapshots."
+          - "Firmar PARs para accesos temporales."
+  - week: 6
+    title: "Bases de datos y Autonomous"
+    sections:
+      - domain: "Database"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Desplegar Base DB, Exadata y Autonomous."
+          - "Configurar Data Guard para HA/DR."
+          - "Activar TDE y gestionar backups."
+          - "Elegir MySQL HeatWave vs ADB según workload."
+  - week: 7
+    title: "Observabilidad y costos"
+    sections:
+      - domain: "Observability and Management"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear alarmas, notificaciones y logging."
+          - "Automatizar con Events y Connector Hub."
+          - "Desplegar con Resource Manager (Terraform)."
+          - "Etiquetar y controlar costos por compartimento."
+  - week: 8
+    title: "Simulacro final 1Z0-1072-26"
+    sections:
+      - domain: "Networking"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 55 preguntas y repaso de fallos."
+          - "Cerrar gaps en red y storage (44% combinado)."
+          - "Repasar IAM con casos de escenario."
+          - "Checklist logístico Pearson VUE."
+`,
+  "oci-arch-p": `
+id: "oci-arch-p"
+provider: "Oracle"
+provider_color: "#C74634"
+title: "Oracle Cloud Infrastructure Architect Professional"
+code: "1Z0-997"
+cost: "$245 USD"
+default_priority: 4
+popularity: 3
+summary: "Credencial Professional que valida arquitecturas empresariales OCI: HA/DR, migración, seguridad y costos a escala."
+meta:
+  exam_version: "Guía vigente (1Z0-997)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.oracle.com/education/certification/"
+  format: "120 minutos · Pearson VUE online o centro (verificar detalle en registro)"
+  passing_score: "Consultar registro oficial"
+  domains:
+    - "Enterprise Architecture"
+    - "High Availability and DR"
+    - "Security and Compliance"
+    - "Migration"
+    - "Cost Governance"
+  validity_years: 3
+  recert_window: "Según política de recertificación Oracle (3 años)"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "Enterprise Architect"
+    - "OCI Architect"
+  versions: []
+  verified_sources:
+    - url: "https://www.oracle.com/education/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Oracle Certification — catálogo y políticas"
+weeks:
+  - week: 1
+    title: "Arquitecturas de referencia OCI"
+    sections:
+      - domain: "Enterprise Architecture"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Diseñar landing zones con múltiples compartimentos."
+          - "Separar workloads por criticidad y blast radius."
+          - "Documentar decisiones con ADRs."
+          - "Estimar TCO a 3 años de la propuesta."
+  - week: 2
+    title: "HA multi-AD y recuperación"
+    sections:
+      - domain: "High Availability and DR"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Distribuir fault domains y availability domains."
+          - "Diseñar active-passive entre regiones."
+          - "Probar DR con game-day semestral."
+          - "Definir RTO/RPO por tier de aplicación."
+  - week: 3
+    title: "Seguridad y compliance empresarial"
+    sections:
+      - domain: "Security and Compliance"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Endurecer con Cloud Guard y Security Zones."
+          - "Centralizar vaults y rotación de secretos."
+          - "Auditar con Audit logs y SIEM externo."
+          - "Mapear controles a marcos regulatorios."
+  - week: 4
+    title: "Migración lift-and-shift y replatform"
+    sections:
+      - domain: "Migration"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Evaluar readiness con Cloud Advisor."
+          - "Planear oleadas con dependencias."
+          - "Migrar bases de datos con Zero Downtime."
+          - "Validar performance post-migración."
+  - week: 5
+    title: "Datos y Autonomous a escala"
+    sections:
+      - domain: "Enterprise Architecture"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Estandarizar ADB para analytics y transacciones."
+          - "Replicar datos críticos entre regiones."
+          - "Gobernar accesos a datos sensibles."
+          - "Optimizar licencias y BYOL donde aplique."
+  - week: 6
+    title: "Redes hub-and-spoke y FastConnect"
+    sections:
+      - domain: "Enterprise Architecture"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Centralizar egress e inspección de tráfico."
+          - "Conectar múltiples VCNs con DRG."
+          - "Asegurar DNS privado a escala."
+          - "Planear crecimiento sin rediseño."
+  - week: 7
+    title: "FinOps en OCI"
+    sections:
+      - domain: "Cost Governance"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Etiquetar todo para chargeback."
+          - "Detectar underutilization con Advisor."
+          - "Comprometer reservas donde haya base estable."
+          - "Reportar savings trimestrales."
+  - week: 8
+    title: "Simulacro final 1Z0-997"
+    sections:
+      - domain: "Enterprise Architecture"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 50 preguntas y repaso de fallos."
+          - "Cerrar gaps en HA/DR y migración."
+          - "Repasar casos de escenario empresarial."
+          - "Checklist logístico Pearson VUE."
+`,
+  "ibm-advocate": `
+id: "ibm-advocate"
+provider: "IBM Cloud"
+provider_color: "#0F62FE"
+title: "IBM Certified Technical Advocate - Cloud"
+code: "C1000-158"
+cost: "$200 USD (verificar en registro)"
+default_priority: 2
+popularity: 3
+summary: "Credencial Advocate que valida fundamentos de IBM Cloud: catálogo, IAM, cómputo, red y observabilidad."
+meta:
+  exam_version: "Guía vigente (C1000-158)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.ibm.com/training/"
+  format: "Multiple-choice · Pearson VUE (verificar duración en registro)"
+  passing_score: "No publicado (verificar en registro)"
+  domains:
+    - "Cloud Concepts"
+    - "IBM Cloud Catalog"
+    - "Identity and Access"
+    - "Compute and Storage"
+    - "Monitoring Basics"
+  validity_years: 2
+  recert_window: "Se renueva con la versión vigente del examen"
+  recert_options:
+    - "Repetir el examen vigente"
+  recert_discount: "Sin descuento documentado"
+  level: "100 · Advocate"
+  career_paths:
+    - "Cloud Advocate"
+    - "Presales Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.ibm.com/training/"
+      date_last_fetched: "2026-09-09"
+      label: "IBM Training — catálogo y registro de exámenes"
+weeks:
+  - week: 1
+    title: "Conceptos cloud y cuenta IBM"
+    sections:
+      - domain: "Cloud Concepts"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Distinguir IaaS, PaaS, SaaS y despliegues IBM."
+          - "Crear cuenta, grupos de recursos y etiquetas."
+          - "Navegar el catálogo y estimar costos."
+          - "Explicar regiones y zonas de IBM Cloud."
+  - week: 2
+    title: "IAM y access groups"
+    sections:
+      - domain: "Identity and Access"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Invitar usuarios y asignar roles de plataforma."
+          - "Crear access groups por equipo."
+          - "Aplicar políticas de servicio mínimas."
+          - "Activar MFA en la cuenta."
+  - week: 3
+    title: "VPC y redes"
+    sections:
+      - domain: "IBM Cloud Catalog"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear una VPC con subredes y ACLs."
+          - "Exponer con floating IP y load balancer."
+          - "Conectar con VPN a nivel conceptual."
+          - "Aislar ambientes dev y prod."
+  - week: 4
+    title: "Cómputo y contenedores"
+    sections:
+      - domain: "Compute and Storage"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Levantar una VSI y conectarse por SSH."
+          - "Crear un cluster IKS/ROKS de prueba."
+          - "Desplegar una app de ejemplo."
+          - "Adjuntar block storage y hacer snapshot."
+  - week: 5
+    title: "Storage y bases de datos"
+    sections:
+      - domain: "Compute and Storage"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Crear buckets COS y políticas de acceso."
+          - "Levantar Databases for PostgreSQL."
+          - "Configurar backups automáticos."
+          - "Elegir storage según durabilidad y costo."
+  - week: 6
+    title: "Observabilidad básica"
+    sections:
+      - domain: "Monitoring Basics"
+        weight: "10%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Ver métricas en Monitoring."
+          - "Buscar eventos en Activity Tracker."
+          - "Crear una alerta de gasto."
+          - "Centralizar logs de una app de prueba."
+  - week: 7
+    title: "Seguridad base"
+    sections:
+      - domain: "Identity and Access"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Gestionar claves con Secrets Manager."
+          - "Rotar credenciales de servicio."
+          - "Revisar findings de Security Advisor."
+          - "Documentar baseline de hardening."
+  - week: 8
+    title: "Simulacro final C1000-158"
+    sections:
+      - domain: "Cloud Concepts"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro de 50 preguntas y repaso de fallos."
+          - "Cerrar gaps en IAM y catálogo."
+          - "Repasar VPC y storage a nivel conceptual."
+          - "Checklist logístico Pearson VUE."
+`,
+  "ibm-arch": `
+id: "ibm-arch"
+provider: "IBM Cloud"
+provider_color: "#0F62FE"
+title: "IBM Certified Professional Architect - Cloud v6"
+code: "C1000-172"
+cost: "$200 USD (verificar en registro)"
+default_priority: 3
+popularity: 3
+summary: "Credencial Professional que valida diseñar soluciones end-to-end en IBM Cloud: infraestructura, red, seguridad y datos."
+meta:
+  exam_version: "Guía vigente v6 (C1000-172)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.ibm.com/training/"
+  format: "64 preguntas · 39 para aprobar · 90 minutos · Pearson VUE"
+  passing_score: "39/64"
+  domains:
+    - "Solution Design"
+    - "Networking"
+    - "Security"
+    - "Data and Integration"
+    - "Operations"
+  validity_years: 2
+  recert_window: "Se renueva con la versión vigente del examen"
+  recert_options:
+    - "Repetir el examen vigente"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "Cloud Architect"
+    - "Solutions Architect"
+  versions: []
+  verified_sources:
+    - url: "https://www.ibm.com/training/"
+      date_last_fetched: "2026-09-09"
+      label: "IBM Training — catálogo y registro de exámenes"
+weeks:
+  - week: 1
+    title: "Diseño de soluciones y landing zone"
+    sections:
+      - domain: "Solution Design"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Mapear requisitos a servicios IBM Cloud."
+          - "Diseñar enterprise con múltiples cuentas."
+          - "Documentar decisiones y supuestos."
+          - "Estimar TCO de la propuesta."
+  - week: 2
+    title: "Red: VPC, Direct Link y DNS"
+    sections:
+      - domain: "Networking"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diseñar VPC hub-and-spoke con transit gateway."
+          - "Conectar on-premises con Direct Link."
+          - "Asegurar con ACLs y security groups."
+          - "Planear DNS privado y resolución híbrida."
+  - week: 3
+    title: "Seguridad y compliance"
+    sections:
+      - domain: "Security"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Federar identidad y aplicar least privilege."
+          - "Centralizar secretos y rotación."
+          - "Proteger datos con Key Protect."
+          - "Auditar con Activity Tracker y SIEM."
+  - week: 4
+    title: "Datos e integración"
+    sections:
+      - domain: "Data and Integration"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Elegir Databases for XXX según workload."
+          - "Integrar apps con MQ y Event Streams."
+          - "Replicar datos críticos entre regiones."
+          - "Gobernar accesos a datos sensibles."
+  - week: 5
+    title: "Contenedores y serverless"
+    sections:
+      - domain: "Solution Design"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Estandarizar IKS/ROKS y Code Engine."
+          - "Diseñar CI/CD con Toolchain."
+          - "Definir estrategias de rollout."
+          - "Observar con Log Analysis y Monitoring."
+  - week: 6
+    title: "HA/DR entre regiones"
+    sections:
+      - domain: "Operations"
+        weight: "10%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Distribuir zonas y regiones por criticidad."
+          - "Definir RTO/RPO y runbooks."
+          - "Probar failover semestralmente."
+          - "Automatizar backups y restores."
+  - week: 7
+    title: "FinOps y gobierno"
+    sections:
+      - domain: "Operations"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Etiquetar y asignar costos por equipo."
+          - "Detectar recursos ociosos."
+          - "Reservar capacidad estable."
+          - "Reportar savings y forecast."
+  - week: 8
+    title: "Simulacro final C1000-172"
+    sections:
+      - domain: "Solution Design"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 64 preguntas y repaso de fallos."
+          - "Cerrar gaps en red y seguridad."
+          - "Repasar casos de escenario empresarial."
+          - "Checklist logístico Pearson VUE."
+`,
+  "tencent-pract": `
+id: "tencent-pract"
+provider: "Tencent Cloud"
+provider_color: "#006EFF"
+title: "Tencent Cloud Practitioner"
+code: "TCP"
+cost: "$100 USD aprox. (verificar en portal)"
+default_priority: 1
+popularity: 2
+summary: "Credencial entry-level que valida fundamentos cloud y productos core Tencent: CVM, VPC, COS, TencentDB y facturación."
+meta:
+  exam_version: "Guía vigente (versión 2026)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.tencentcloud.com/edu/training"
+  format: "60 preguntas · 90 minutos · 70/100 para aprobar"
+  passing_score: "70/100"
+  domains:
+    - "Cloud Concepts"
+    - "Compute (CVM)"
+    - "Network (VPC, CLB, CDN)"
+    - "Storage (COS, CBS)"
+    - "Database and Security"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración (2 años)"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "100 · Practitioner"
+  career_paths:
+    - "Cloud Beginner"
+    - "Presales Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.tencentcloud.com/edu/training"
+      date_last_fetched: "2026-09-09"
+      label: "Tencent Cloud Training and Certification — portal"
+weeks:
+  - week: 1
+    title: "Conceptos y consola Tencent"
+    sections:
+      - domain: "Cloud Concepts"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Distinguir IaaS, PaaS, SaaS en el portfolio Tencent."
+          - "Crear cuenta, proyectos y control de gastos."
+          - "Navegar la consola y Cloud Shell."
+          - "Explicar regiones y zonas disponibles."
+  - week: 2
+    title: "CVM y cómputo"
+    sections:
+      - domain: "Compute (CVM)"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Lanzar una CVM y conectarse."
+          - "Elegir tipos de instancia por workload."
+          - "Crear imágenes y snapshots."
+          - "Configurar auto scaling básico."
+  - week: 3
+    title: "VPC, CLB y CDN"
+    sections:
+      - domain: "Network (VPC, CLB, CDN)"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear VPC con subredes y tablas de ruta."
+          - "Exponer con CLB y EIP."
+          - "Acelerar contenido con CDN."
+          - "Asegurar con security groups."
+  - week: 4
+    title: "COS y CBS"
+    sections:
+      - domain: "Storage (COS, CBS)"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Crear buckets COS y gestionar permisos."
+          - "Adjuntar CBS y expandir volúmenes."
+          - "Versionar y archivar objetos."
+          - "Migrar un backup como ejercicio."
+  - week: 5
+    title: "TencentDB y CAM"
+    sections:
+      - domain: "Database and Security"
+        weight: "15%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Levantar MySQL/Redis gestionados."
+          - "Crear subcuentas CAM con políticas mínimas."
+          - "Activar MFA y auditar accesos."
+          - "Elegir base según el caso de uso."
+  - week: 6
+    title: "Monitoreo y SCF/TKE intro"
+    sections:
+      - domain: "Cloud Concepts"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Ver métricas en Cloud Monitor."
+          - "Crear una alarma de CPU."
+          - "Probar una función SCF hola-mundo."
+          - "Describir TKE a alto nivel."
+  - week: 7
+    title: "Facturación y casos"
+    sections:
+      - domain: "Cloud Concepts"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Leer la factura y detectar anomalías."
+          - "Comparar pay-as-you-go vs paquetes."
+          - "Estimar un despliegue típico."
+          - "Resolver casos de ejemplo del temario."
+  - week: 8
+    title: "Simulacro final TCP"
+    sections:
+      - domain: "Compute (CVM)"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro de 60 preguntas en 90 minutos."
+          - "Cerrar gaps en red y billing."
+          - "Repasar CVM, COS y CAM."
+          - "Checklist logístico del examen."
+`,
+  "tencent-tcca": `
+id: "tencent-tcca"
+provider: "Tencent Cloud"
+provider_color: "#006EFF"
+title: "Tencent Cloud Computing Associate Engineer"
+code: "TCCA"
+cost: "$100 USD aprox. (verificar en portal)"
+default_priority: 2
+popularity: 2
+summary: "Credencial Associate (TCCA) que valida operar workloads productivos: despliegue, monitoreo y troubleshooting en Tencent Cloud."
+meta:
+  exam_version: "Guía vigente (versión 2026)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.tencentcloud.com/edu/training"
+  format: "Multiple-choice (verificar duración en portal)"
+  passing_score: "No publicado (verificar en portal)"
+  domains:
+    - "Deployment"
+    - "Monitoring"
+    - "Troubleshooting"
+    - "Security Operations"
+    - "Cost Operations"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración (2 años)"
+  recert_options:
+    - "Repetir el examen o subir a TCCP"
+  recert_discount: "Sin descuento documentado"
+  level: "200 · Associate"
+  career_paths:
+    - "Cloud SysOps"
+    - "Cloud Support Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.tencentcloud.com/edu/training"
+      date_last_fetched: "2026-09-09"
+      label: "Tencent Cloud Training and Certification — portal"
+weeks:
+  - week: 1
+    title: "Despliegue de workloads"
+    sections:
+      - domain: "Deployment"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Desplegar una app 3-tier con CVM, CLB y TencentDB."
+          - "Automatizar con plantillas y scripts."
+          - "Versionar releases con rollback."
+          - "Validar salud post-despliegue."
+  - week: 2
+    title: "Monitoreo productivo"
+    sections:
+      - domain: "Monitoring"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Centralizar métricas y logs."
+          - "Crear alarmas accionables."
+          - "Definir SLIs básicos del servicio."
+          - "Armar dashboard operativo."
+  - week: 3
+    title: "Troubleshooting sistemático"
+    sections:
+      - domain: "Troubleshooting"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diagnosticar latencia por capas."
+          - "Rastrear errores 5xx hasta el origen."
+          - "Resolver agotamiento de disco/memoria."
+          - "Escribir postmortems accionables."
+  - week: 4
+    title: "Seguridad operativa"
+    sections:
+      - domain: "Security Operations"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Endurecer security groups en producción."
+          - "Rotar claves y certificados."
+          - "Mitigar DDoS básico con Anti-DDoS."
+          - "Auditar permisos trimestralmente."
+  - week: 5
+    title: "Backups y DR"
+    sections:
+      - domain: "Deployment"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Automatizar snapshots y backups DB."
+          - "Probar restores periódicamente."
+          - "Replicar datos críticos."
+          - "Documentar runbook de recuperación."
+  - week: 6
+    title: "Escalado y performance"
+    sections:
+      - domain: "Monitoring"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Configurar auto scaling por métricas."
+          - "Perfilar cuellos de botella."
+          - "Cachear con Redis donde aplique."
+          - "Medir mejora antes/después."
+  - week: 7
+    title: "Costos en operación"
+    sections:
+      - domain: "Cost Operations"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Detectar recursos ociosos."
+          - "Rightsizing de CVMs."
+          - "Alertas de presupuesto por proyecto."
+          - "Reporte mensual de gasto."
+  - week: 8
+    title: "Simulacro final TCCA"
+    sections:
+      - domain: "Deployment"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado y repaso de fallos."
+          - "Cerrar gaps en monitoreo y DR."
+          - "Repasar CAM y networking operativo."
+          - "Checklist logístico del examen."
+`,
+  "sf-admin": `
+id: "sf-admin"
+provider: "Salesforce"
+provider_color: "#00A1E0"
+title: "Salesforce Certified Administrator"
+code: "ADM-201"
+cost: "$200 USD"
+default_priority: 2
+popularity: 5
+summary: "Credencial base que valida configurar, asegurar y operar una org Salesforce (Sales, Service, Collaboration)."
+meta:
+  exam_version: "Guía vigente (incluye dominio Agentforce AI 8%)"
+  guide_date: "2026-09-09"
+  guide_source: "https://trailheadacademy.salesforce.com/certificate/exam-platform-admin---Plat-Admn-201"
+  format: "60 + 5 preguntas · 105 minutos · Kryterion online o centro"
+  passing_score: "68% (verificar en registro)"
+  domains:
+    - "Organization Setup"
+    - "User Setup and Security"
+    - "Standard and Custom Objects"
+    - "Sales and Service Applications"
+    - "Data and Analytics"
+    - "Workflow and Automation"
+  validity_years: 0
+  recert_window: "Mantenimiento Trailhead 3 veces por año (sin expiración fija)"
+  recert_options:
+    - "Completar el módulo Trailhead de cada release"
+  recert_discount: "Mantenimiento gratuito"
+  level: "200 · Administrator"
+  career_paths:
+    - "Salesforce Administrator"
+    - "CRM Specialist"
+  versions: []
+  verified_sources:
+    - url: "https://trailheadacademy.salesforce.com/certificate/exam-platform-admin---Plat-Admn-201"
+      date_last_fetched: "2026-09-09"
+      label: "Salesforce Certified Platform Administrator — Exam Details"
+weeks:
+  - week: 1
+    title: "Setup de org y modelo de datos"
+    sections:
+      - domain: "Organization Setup"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Configurar company information, fiscal year y UI."
+          - "Distinguir sandboxes por propósito."
+          - "Crear objetos custom y relaciones."
+          - "Practicar en un Trailhead Playground."
+  - week: 2
+    title: "Usuarios, roles y seguridad"
+    sections:
+      - domain: "User Setup and Security"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Crear usuarios, roles y jerarquía."
+          - "Asignar perfiles vs permission sets."
+          - "Configurar OWD y sharing rules."
+          - "Auditar accesos con reportes."
+  - week: 3
+    title: "Objetos standard y custom"
+    sections:
+      - domain: "Standard and Custom Objects"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Modelar cuentas, contactos y oportunidades."
+          - "Crear campos, validaciones y page layouts."
+          - "Gestionar record types y processes."
+          - "Importar datos con Data Loader."
+  - week: 4
+    title: "Sales y Service Cloud"
+    sections:
+      - domain: "Sales and Service Applications"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Configurar pipeline, stages y forecasts."
+          - "Montar casos, queues y reglas de asignación."
+          - "Activar knowledge base para agentes."
+          - "Medir CSAT con reportes."
+  - week: 5
+    title: "Datos, reportes y dashboards"
+    sections:
+      - domain: "Data and Analytics"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Construir reportes tabulares, summary y matrix."
+          - "Armar dashboards con componentes."
+          - "Deduplicar y auditar calidad de datos."
+          - "Programar exports periódicos."
+  - week: 6
+    title: "Automatización con Flow"
+    sections:
+      - domain: "Workflow and Automation"
+        weight: "10%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Crear screen flows y record-triggered flows."
+          - "Elegir Flow vs approval process."
+          - "Manejar errores y fault paths."
+          - "Probar en sandbox antes de activar."
+  - week: 7
+    title: "Agentforce y AppExchange"
+    sections:
+      - domain: "Workflow and Automation"
+        weight: "10%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Describir capacidades de Agentforce AI."
+          - "Evaluar apps de AppExchange con criterio."
+          - "Revisar permisos de paquetes instalados."
+          - "Repasar el dominio AI del examen 2026."
+  - week: 8
+    title: "Simulacro final ADM-201"
+    sections:
+      - domain: "Organization Setup"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 60 preguntas y repaso de fallos."
+          - "Cerrar gaps en seguridad y sharing."
+          - "Repasar Trailhead Admin trailmix."
+          - "Checklist logístico Kryterion."
+`,
+  "sf-pd1": `
+id: "sf-pd1"
+provider: "Salesforce"
+provider_color: "#00A1E0"
+title: "Salesforce Certified Platform Developer I"
+code: "PD1"
+cost: "$200 USD"
+default_priority: 3
+popularity: 4
+summary: "Credencial developer que valida Apex, SOQL/SOSL, triggers, async y Lightning Web Components sobre la plataforma."
+meta:
+  exam_version: "Guía vigente"
+  guide_date: "2026-09-09"
+  guide_source: "https://trailhead.salesforce.com/"
+  format: "60 preguntas · 105 minutos · Kryterion online o centro"
+  passing_score: "65% (verificar en registro)"
+  domains:
+    - "Developer Fundamentals"
+    - "Apex and Database"
+    - "SOQL and SOSL"
+    - "Triggers and Async"
+    - "Lightning Web Components"
+    - "Testing and Debugging"
+  validity_years: 0
+  recert_window: "Mantenimiento Trailhead 3 veces por año (sin expiración fija)"
+  recert_options:
+    - "Completar el módulo Trailhead de cada release"
+  recert_discount: "Mantenimiento gratuito"
+  level: "300 · Developer"
+  career_paths:
+    - "Salesforce Developer"
+    - "Platform Developer"
+  versions: []
+  verified_sources:
+    - url: "https://trailhead.salesforce.com/"
+      date_last_fetched: "2026-09-09"
+      label: "Trailhead — plataforma oficial de aprendizaje y registro"
+weeks:
+  - week: 1
+    title: "Fundamentos y org de desarrollo"
+    sections:
+      - domain: "Developer Fundamentals"
+        weight: "15%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Montar Dev Hub y scratch orgs."
+          - "Trabajar con SFDX y control de versiones."
+          - "Explicar límites governor a alto nivel."
+          - "Navegar Setup con mentalidad developer."
+  - week: 2
+    title: "Apex esencial"
+    sections:
+      - domain: "Apex and Database"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Escribir clases, métodos y colecciones."
+          - "Operar DML con bulkification."
+          - "Encapsular lógica en services y selectors."
+          - "Ejecutar anonymous Apex para probar."
+  - week: 3
+    title: "SOQL y SOSL"
+    sections:
+      - domain: "SOQL and SOSL"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Consultar con filtros, orden y límites."
+          - "Navegar relaciones parent-child."
+          - "Buscar multi-objeto con SOSL."
+          - "Evitar queries en loops."
+  - week: 4
+    title: "Triggers y procesamiento async"
+    sections:
+      - domain: "Triggers and Async"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Implementar trigger handler pattern."
+          - "Delegar a future, queueable y batch."
+          - "Controlar recursión de triggers."
+          - "Planificar jobs con schedulable."
+  - week: 5
+    title: "Lightning Web Components"
+    sections:
+      - domain: "Lightning Web Components"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Crear un LWC con @wire y Apex imperativo."
+          - "Comunicar componentes con eventos."
+          - "Manejar formularios con record-edit-form."
+          - "Depurar con Lightning DevTools."
+  - week: 6
+    title: "Seguridad y datos en código"
+    sections:
+      - domain: "Apex and Database"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Respetar sharing y CRUD/FLS en Apex."
+          - "Usar WITH SECURITY_ENFORCED."
+          - "Prevenir SOQL injection."
+          - "Gestionar secretos sin hardcode."
+  - week: 7
+    title: "Testing y debugging"
+    sections:
+      - domain: "Testing and Debugging"
+        weight: "10%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Escribir tests con @isTest y asserts."
+          - "Cubrir triggers al 75%+ con datos de prueba."
+          - "Leer debug logs para fallos."
+          - "Medir coverage antes del deploy."
+  - week: 8
+    title: "Simulacro final PD1"
+    sections:
+      - domain: "Developer Fundamentals"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 60 preguntas y repaso de fallos."
+          - "Cerrar gaps en async y LWC."
+          - "Repasar límites governor clave."
+          - "Checklist logístico Kryterion."
+`,
 };
 
 function fromYaml<T>(raw: string): T | null {
