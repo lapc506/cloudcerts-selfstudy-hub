@@ -105,7 +105,7 @@ export interface UserState {
   selectedGuides: string[];
 }
 
-export type View = "home" | "progress" | "guides" | "editor" | "badges" | "codelabs" | "mocks";
+export type View = "home" | "progress" | "guides" | "editor" | "badges" | "codelabs" | "mocks" | "portfolio";
 
 /** Preferencias visuales (shape de datos; el tema MUI vive en presentation). */
 export interface ThemeSettings {

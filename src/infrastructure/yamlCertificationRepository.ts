@@ -7421,6 +7421,950 @@ weeks:
           - "Repasar límites governor clave."
           - "Checklist logístico Kryterion."
 `,
+  "sec-plus": `
+id: "sec-plus"
+provider: "CompTIA"
+provider_color: "#D42A1E"
+title: "CompTIA Security+"
+code: "SY0-701"
+cost: "$439 USD"
+default_priority: 2
+popularity: 5
+summary: "Credencial baseline de ciberseguridad: amenazas, arquitectura, operaciones y gestión de programa de seguridad (Pearson VUE)."
+meta:
+  exam_version: "Guía vigente SY0-701 (V7)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.comptia.org/en-us/certifications/security/"
+  format: "90 preguntas máx. · 90 minutos · 750/900 para aprobar · Pearson VUE"
+  passing_score: "750/900"
+  domains:
+    - "General Security Concepts: 12%"
+    - "Threats, Vulnerabilities and Mitigations: 22%"
+    - "Security Architecture: 18%"
+    - "Security Operations: 28%"
+    - "Security Program Management: 10%"
+  validity_years: 3
+  recert_window: "50 CEU en 3 años o CertMaster CE o cert superior"
+  recert_options:
+    - "Juntar 50 CEU y pagar el fee del ciclo"
+    - "Aprobar CySA+ o PenTest+ (renueva automáticamente)"
+  recert_discount: "Sin descuento documentado"
+  level: "100 · Core"
+  career_paths:
+    - "SOC Analyst"
+    - "Security Specialist"
+  versions: []
+  verified_sources:
+    - url: "https://www.comptia.org/en-us/certifications/security/"
+      date_last_fetched: "2026-09-09"
+      label: "Security+ (SY0-701) — Exam Details oficiales"
+weeks:
+  - week: 1
+    title: "Conceptos generales y CIA"
+    sections:
+      - domain: "General Security Concepts"
+        weight: "12%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Explicar CIA, AAA y Zero Trust con ejemplos."
+          - "Distinguir amenazas, vulnerabilidades y riesgos."
+          - "Clasificar controles técnicos, físicos y administrativos."
+          - "Mapear conceptos a casos de helpdesk reales."
+  - week: 2
+    title: "Actores, vectores y malware"
+    sections:
+      - domain: "Threats, Vulnerabilities and Mitigations"
+        weight: "22%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Reconocer phishing, vishing, smishing y watering hole."
+          - "Describir ransomware, troyanos y RATs."
+          - "Practicar con el HTTP Headers Scanner como laboratorio."
+          - "Clasificar indicadores IoC e IoA."
+  - week: 3
+    title: "Vulnerabilidades y mitigación"
+    sections:
+      - domain: "Threats, Vulnerabilities and Mitigations"
+        weight: "22%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Escanear con un vulnerability scanner y priorizar CVEs."
+          - "Aplicar parches con ventanas de mantenimiento."
+          - "Segmentar red para contener laterales."
+          - "Documentar excepciones con riesgo aceptado."
+  - week: 4
+    title: "Arquitectura y red segura"
+    sections:
+      - domain: "Security Architecture"
+        weight: "18%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Diseñar DMZ, VLANs y microsegmentación."
+          - "Elegir firewall, IDS/IPS y NAC por caso."
+          - "Asegurar Wi-Fi empresarial y VPN."
+          - "Dibujar la arquitectura de un caso de estudio."
+  - week: 5
+    title: "Identidad, criptografía y PKI"
+    sections:
+      - domain: "Security Architecture"
+        weight: "18%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Implementar MFA y SSO con SAML/OIDC."
+          - "Emitir y renovar certificados internos."
+          - "Comparar AES, RSA y hashing con el Hash Identifier."
+          - "Rotar claves sin downtime."
+  - week: 6
+    title: "Operaciones: SOC, logs e IR"
+    sections:
+      - domain: "Security Operations"
+        weight: "28%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Triagar alertas con un playbook de SOC."
+          - "Correlacionar logs de firewall, EDR e IDS."
+          - "Ejecutar contención y erradicación en un tabletop."
+          - "Preservar evidencia con cadena de custodia."
+  - week: 7
+    title: "Gobierno, riesgo y cumplimiento"
+    sections:
+      - domain: "Security Program Management"
+        weight: "10%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Armar matriz de riesgos con impacto y probabilidad."
+          - "Redactar políticas aceptables y enforceables."
+          - "Mapear NIST CSF a controles de la org."
+          - "Preparar auditoría con evidencias trazables."
+  - week: 8
+    title: "Simulacro final SY0-701"
+    sections:
+      - domain: "Security Operations"
+        weight: "28%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 90 preguntas y repaso de fallos."
+          - "Practicar PBQs de logs y firewall."
+          - "Cerrar gaps en operaciones y amenazas."
+          - "Checklist logístico Pearson VUE."
+`,
+  "cysa-plus": `
+id: "cysa-plus"
+provider: "CompTIA"
+provider_color: "#D42A1E"
+title: "CompTIA Cybersecurity Analyst (CySA+)"
+code: "CS0-003"
+cost: "$439 USD"
+default_priority: 3
+popularity: 4
+summary: "Credencial blue-team que valida análisis de amenazas, gestión de vulnerabilidades, respuesta a incidentes y reportes."
+meta:
+  exam_version: "Guía vigente CS0-003"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.comptia.org/en-us/certifications/cybersecurity-analyst/"
+  format: "85 preguntas · 165 minutos · 750/900 para aprobar · Pearson VUE"
+  passing_score: "750/900"
+  domains:
+    - "Security Operations: 33%"
+    - "Vulnerability Management: 30%"
+    - "Incident Response and Management: 20%"
+    - "Reporting and Communication: 17%"
+  validity_years: 3
+  recert_window: "CEU en 3 años o cert superior (renueva Security+)"
+  recert_options:
+    - "Juntar CEU del ciclo"
+    - "Aprobar PenTest+ o SecurityX"
+  recert_discount: "Sin descuento documentado"
+  level: "200 · Intermediate"
+  career_paths:
+    - "Security Analyst"
+    - "Incident Responder"
+  versions: []
+  verified_sources:
+    - url: "https://www.comptia.org/en-us/certifications/cybersecurity-analyst/"
+      date_last_fetched: "2026-09-09"
+      label: "CySA+ (CS0-003) — Exam Details oficiales"
+weeks:
+  - week: 1
+    title: "Operación de seguridad y SIEM"
+    sections:
+      - domain: "Security Operations"
+        weight: "33%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Priorizar alertas con severidad e impacto al negocio."
+          - "Escribir reglas de correlación en un SIEM."
+          - "Enriquecer alertas con threat intel."
+          - "Medir MTTD/MTTR del equipo."
+  - week: 2
+    title: "Análisis de tráfico y endpoints"
+    sections:
+      - domain: "Security Operations"
+        weight: "33%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Analizar capturas con el Network Traffic Analyzer."
+          - "Cazar anomalías en logs de EDR."
+          - "Identificar C2 por patrones de beaconing."
+          - "Documentar hallazgos con timestamps."
+  - week: 3
+    title: "Gestión de vulnerabilidades"
+    sections:
+      - domain: "Vulnerability Management"
+        weight: "30%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Escanear y clasificar por CVSS y exploitabilidad."
+          - "Priorizar con contexto de activos críticos."
+          - "Coordinar remediación con dueños de sistemas."
+          - "Verificar cierre con re-scan."
+  - week: 4
+    title: "Threat intel aplicada"
+    sections:
+      - domain: "Security Operations"
+        weight: "33%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Mapear TTPs a MITRE ATT&CK."
+          - "Operacionalizar IoCs en controles."
+          - "Evaluar credibilidad de fuentes."
+          - "Compartir intel con formato STIX básico."
+  - week: 5
+    title: "Respuesta a incidentes IR"
+    sections:
+      - domain: "Incident Response and Management"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Ejecutar el ciclo preparación-detección-contención."
+          - "Aislar hosts sin destruir evidencia."
+          - "Coordinar comunicación en crisis."
+          - "Hacer tabletop de ransomware."
+  - week: 6
+    title: "Forense digital esencial"
+    sections:
+      - domain: "Incident Response and Management"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Adquirir imágenes con hashing de integridad."
+          - "Analizar artefactos de Windows/Linux."
+          - "Reconstruir timeline del incidente."
+          - "Redactar informe forense defendible."
+  - week: 7
+    title: "Reportes y comunicación"
+    sections:
+      - domain: "Reporting and Communication"
+        weight: "17%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Escribir ejecutivos sin jerga para dirección."
+          - "Proponer remediación con costo y riesgo."
+          - "Presentar métricas del SOC."
+          - "Documentar lecciones aprendidas."
+  - week: 8
+    title: "Simulacro final CS0-003"
+    sections:
+      - domain: "Security Operations"
+        weight: "33%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 85 preguntas y repaso de fallos."
+          - "Practicar PBQs de logs y escaneos."
+          - "Cerrar gaps en IR y vuln management."
+          - "Checklist logístico Pearson VUE."
+`,
+  "pentest-plus": `
+id: "pentest-plus"
+provider: "CompTIA"
+provider_color: "#D42A1E"
+title: "CompTIA PenTest+"
+code: "PT0-003"
+cost: "$404 USD"
+default_priority: 3
+popularity: 4
+summary: "Credencial ofensiva que valida planificar, ejecutar y reportar pentests: reconocimiento, explotación y post-explotación."
+meta:
+  exam_version: "Guía vigente PT0-003"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.comptia.org/en-us/certifications/pentest/"
+  format: "165 minutos · performance-based + multiple-choice · Pearson VUE"
+  passing_score: "750/900"
+  domains:
+    - "Planning and Scoping"
+    - "Information Gathering"
+    - "Attacks and Exploits"
+    - "Reporting"
+    - "Tools and Code Analysis"
+  validity_years: 3
+  recert_window: "CEU en 3 años o cert superior"
+  recert_options:
+    - "Juntar CEU del ciclo"
+    - "Aprobar SecurityX"
+  recert_discount: "Sin descuento documentado"
+  level: "200 · Intermediate"
+  career_paths:
+    - "Penetration Tester"
+    - "Vulnerability Analyst"
+  versions: []
+  verified_sources:
+    - url: "https://www.comptia.org/en-us/certifications/pentest/"
+      date_last_fetched: "2026-09-09"
+      label: "PenTest+ (PT0-003) — Exam Details oficiales"
+weeks:
+  - week: 1
+    title: "Planificación y alcance"
+    sections:
+      - domain: "Planning and Scoping"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Redactar reglas de enfrentamiento y alcance."
+          - "Definir ventanas, exclusiones y contactos."
+          - "Gestionar autorizaciones por escrito."
+          - "Estimar esfuerzo por tipo de test."
+  - week: 2
+    title: "Reconocimiento y OSINT"
+    sections:
+      - domain: "Information Gathering"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Enumerar subdominios y servicios expuestos."
+          - "Recolectar OSINT sin tocar el objetivo."
+          - "Mapear tecnologías con fingerprinting."
+          - "Priorizar superficie por criticidad."
+  - week: 3
+    title: "Escaneo y enumeración"
+    sections:
+      - domain: "Information Gathering"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Escanear puertos con el Simple Port Scanner."
+          - "Enumerar SMB, SNMP y servicios web."
+          - "Detectar versiones vulnerables."
+          - "Evitar DoS accidentales al escanear."
+  - week: 4
+    title: "Explotación web"
+    sections:
+      - domain: "Attacks and Exploits"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Explotar inyecciones y XSS en lab."
+          - "Abusar de uploads y LFI/RFI."
+          - "Romper autenticación débil."
+          - "Practicar en entorno aislado legal."
+  - week: 5
+    title: "Post-explotación y pivoting"
+    sections:
+      - domain: "Attacks and Exploits"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Escalar privilegios en Linux/Windows."
+          - "Persistir acceso para la demo acordada."
+          - "Pivotear a segmentos internos."
+          - "Limpiar rastros según el alcance."
+  - week: 6
+    title: "Cracking y password attacks"
+    sections:
+      - domain: "Tools and Code Analysis"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L3"
+        points:
+          - "Atacar hashes con el Hash Cracker."
+          - "Armar wordlists por objetivo."
+          - "Evaluar políticas de passwords."
+          - "Recomendar MFA y gestores."
+  - week: 7
+    title: "Reporte ejecutivo y técnico"
+    sections:
+      - domain: "Reporting"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Calificar hallazgos por riesgo real."
+          - "Escribir remediación accionable."
+          - "Presentar a dirección sin tecnicismos."
+          - "Incluir evidencias reproducibles."
+  - week: 8
+    title: "Simulacro final PT0-003"
+    sections:
+      - domain: "Attacks and Exploits"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado y repaso de fallos."
+          - "Practicar PBQs de escaneo y explotación."
+          - "Cerrar gaps en reporting."
+          - "Checklist logístico Pearson VUE."
+`,
+  "securityx": `
+id: "securityx"
+provider: "CompTIA"
+provider_color: "#D42A1E"
+title: "CompTIA SecurityX"
+code: "CAS-005"
+cost: "$509 USD"
+default_priority: 4
+popularity: 3
+summary: "Credencial avanzada (ex CASP+) hands-on para arquitectos: gobernanza, arquitectura, operaciones e integración empresarial."
+meta:
+  exam_version: "Guía vigente CAS-005 (V5)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.comptia.org/en-us/certifications/securityx/"
+  format: "90 preguntas máx. · 165 minutos · pass/fail · Pearson VUE"
+  passing_score: "Pass/Fail (sin scaled score)"
+  domains:
+    - "Enterprise Security Architecture"
+    - "Security Operations"
+    - "Governance and Compliance"
+    - "Secure Integration"
+  validity_years: 3
+  recert_window: "CEU en 3 años (renueva todo el stack inferior)"
+  recert_options:
+    - "Juntar CEU del ciclo"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Advanced"
+  career_paths:
+    - "Security Architect"
+    - "Senior Security Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.comptia.org/en-us/certifications/securityx/"
+      date_last_fetched: "2026-09-09"
+      label: "SecurityX (CAS-005) — Exam Details oficiales"
+weeks:
+  - week: 1
+    title: "Arquitectura empresarial segura"
+    sections:
+      - domain: "Enterprise Security Architecture"
+        weight: "30%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Diseñar Zero Trust por pilares."
+          - "Segmentar enterprise en zonas de confianza."
+          - "Evaluar trade-offs costo vs riesgo."
+          - "Documentar arquitectura objetivo."
+  - week: 2
+    title: "Criptografía y PKI empresarial"
+    sections:
+      - domain: "Enterprise Security Architecture"
+        weight: "30%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diseñar jerarquía CA interna."
+          - "Elegir algoritmos post-cuánticos ready."
+          - "Automatizar ciclo de vida de certificados."
+          - "Auditar uso criptográfico."
+  - week: 3
+    title: "Operaciones SOC avanzadas"
+    sections:
+      - domain: "Security Operations"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Orquestar respuesta con SOAR."
+          - "Cazar amenazas proactivamente."
+          - "Integrar threat intel al SOC."
+          - "Medir madurez operativa."
+  - week: 4
+    title: "Cloud y virtualización segura"
+    sections:
+      - domain: "Secure Integration"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Endurecer hipervisores y contenedores."
+          - "Diseñar landing zones con guardrails."
+          - "Proteger APIs con gateway y mTLS."
+          - "Auditar configuraciones cloud."
+  - week: 5
+    title: "Gobernanza y riesgo"
+    sections:
+      - domain: "Governance and Compliance"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Alinear NIST CSF/800-53 a la org."
+          - "Gestionar riesgo de terceros."
+          - "Preparar auditorías externas."
+          - "Reportar postura a la dirección."
+  - week: 6
+    title: "AppSec y DevSecOps"
+    sections:
+      - domain: "Secure Integration"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Integrar SAST/DAST al pipeline."
+          - "Firmar artefactos y SBOM."
+          - "Modelar amenazas de nuevas apps."
+          - "Gatear releases por riesgo."
+  - week: 7
+    title: "Continuidad y respuesta ejecutiva"
+    sections:
+      - domain: "Governance and Compliance"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Diseñar BCP/DRP testeados."
+          - "Liderar crisis con roles claros."
+          - "Comunicar breaches con asesoría legal."
+          - "Hacer postmortem sin culpa."
+  - week: 8
+    title: "Simulacro final CAS-005"
+    sections:
+      - domain: "Enterprise Security Architecture"
+        weight: "30%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado y repaso de fallos."
+          - "Practicar PBQs de arquitectura."
+          - "Cerrar gaps en gobierno."
+          - "Checklist logístico Pearson VUE."
+`,
+  "cissp": `
+id: "cissp"
+provider: "ISC2"
+provider_color: "#007A5E"
+title: "CISSP – Certified Information Systems Security Professional"
+code: "CISSP"
+cost: "$749 USD"
+default_priority: 4
+popularity: 5
+summary: "Credencial senior que valida gobernar y diseñar seguridad en 8 dominios CBK con mentalidad de gestión del riesgo (CAT, Pearson VUE)."
+meta:
+  exam_version: "Guía vigente (CAT en inglés)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.isc2.org/register-for-exam/isc2-exam-pricing"
+  format: "100-150 preguntas CAT · 3 horas · 700/1000 para aprobar · Pearson VUE"
+  passing_score: "700/1000"
+  domains:
+    - "Security and Risk Management: 15%"
+    - "Asset Security: 10%"
+    - "Security Architecture and Engineering: 13%"
+    - "Communication and Network Security: 13%"
+    - "Identity and Access Management: 13%"
+    - "Security Assessment and Testing: 12%"
+    - "Security Operations: 13%"
+    - "Software Development Security: 11%"
+  validity_years: 3
+  recert_window: "120 CPE en 3 años + AMF anual"
+  recert_options:
+    - "Juntar 120 CPE y pagar el AMF anual"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Advanced"
+  career_paths:
+    - "Security Manager"
+    - "Security Architect"
+  versions: []
+  verified_sources:
+    - url: "https://www.isc2.org/register-for-exam/isc2-exam-pricing"
+      date_last_fetched: "2026-09-09"
+      label: "ISC2 Exam Pricing — CISSP $749 (Américas)"
+weeks:
+  - week: 1
+    title: "Gobierno, riesgo y compliance"
+    sections:
+      - domain: "Security and Risk Management"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Pensar como gestor: elegir la mejor opción, no el fix técnico."
+          - "Cuantificar riesgo con ALE y análisis costo-beneficio."
+          - "Mapear marcos NIST/ISO a la organización."
+          - "Redactar políticas enforceables y medibles."
+  - week: 2
+    title: "Activos, datos y privacidad"
+    sections:
+      - domain: "Asset Security"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Clasificar datos y definir owners."
+          - "Aplicar retención y destrucción segura."
+          - "Proteger privacidad con minimización."
+          - "Etiquetar activos críticos del examen."
+  - week: 3
+    title: "Arquitectura e ingeniería"
+    sections:
+      - domain: "Security Architecture and Engineering"
+        weight: "13%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Evaluar modelos: Bell-LaPadula, Biba, Brewer-Nash."
+          - "Diseñar criptografía: modos, PKI y gestión de claves."
+          - "Endurecer endpoints y entornos cloud."
+          - "Comparar controles físicos y técnicos."
+  - week: 4
+    title: "Redes y comunicaciones"
+    sections:
+      - domain: "Communication and Network Security"
+        weight: "13%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Asegurar VPN, wireless y VoIP."
+          - "Segmentar con firewalls y NAC."
+          - "Proteger DNS y correo contra spoofing."
+          - "Diseñar acceso remoto con Zero Trust."
+  - week: 5
+    title: "IAM y control de accesos"
+    sections:
+      - domain: "Identity and Access Management"
+        weight: "13%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Implementar MFA, SSO y federación."
+          - "Revisar accesos con certificaciones periódicas."
+          - "Prevenir escalación con least privilege."
+          - "Auditar cuentas privilegiadas."
+  - week: 6
+    title: "Assessment, tests y operaciones"
+    sections:
+      - domain: "Security Assessment and Testing"
+        weight: "12%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Planear pentests y vulnerability assessments."
+          - "Interpretar resultados sin falsos positivos."
+          - "Operar SOC con métricas MTTD/MTTR."
+          - "Gestionar parches y configuraciones."
+  - week: 7
+    title: "SDLC seguro y BCP"
+    sections:
+      - domain: "Software Development Security"
+        weight: "11%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Integrar seguridad al SDLC y DevSecOps."
+          - "Exigir code review y testing."
+          - "Planear BCP/DRP con RTO/RPO."
+          - "Practicar preguntas trampa de gestión."
+  - week: 8
+    title: "Simulacro final CISSP"
+    sections:
+      - domain: "Security Operations"
+        weight: "13%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro de 150 preguntas en 3 horas."
+          - "Entrenar el mindset manager vs técnico."
+          - "Cerrar gaps en los 8 dominios."
+          - "Checklist logístico Pearson VUE."
+`,
+  "ccsp": `
+id: "ccsp"
+provider: "ISC2"
+provider_color: "#007A5E"
+title: "CCSP – Certified Cloud Security Professional"
+code: "CCSP"
+cost: "$599 USD"
+default_priority: 4
+popularity: 4
+summary: "Credencial de seguridad cloud: arquitectura, datos, plataforma, operaciones y legal/compliance (Pearson VUE)."
+meta:
+  exam_version: "Guía vigente (outline 2026)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.isc2.org/register-for-exam/isc2-exam-pricing"
+  format: "125 preguntas · 3 horas · 700/1000 para aprobar · Pearson VUE"
+  passing_score: "700/1000"
+  domains:
+    - "Cloud Concepts and Architecture"
+    - "Cloud Data Security"
+    - "Cloud Platform and Infrastructure"
+    - "Cloud Application Security"
+    - "Operations"
+    - "Legal and Compliance"
+  validity_years: 3
+  recert_window: "CPE en 3 años + AMF anual"
+  recert_options:
+    - "Juntar CPE del ciclo y pagar el AMF"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Advanced"
+  career_paths:
+    - "Cloud Security Architect"
+    - "Cloud Security Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.isc2.org/register-for-exam/isc2-exam-pricing"
+      date_last_fetched: "2026-09-09"
+      label: "ISC2 Exam Pricing — CCSP $599 (Américas)"
+weeks:
+  - week: 1
+    title: "Conceptos y modelos cloud"
+    sections:
+      - domain: "Cloud Concepts and Architecture"
+        weight: "20%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Distinguir IaaS/PaaS/SaaS y despliegues."
+          - "Mapear responsabilidad compartida por modelo."
+          - "Evaluar riesgos de multicloud."
+          - "Elegir modelo por caso de negocio."
+  - week: 2
+    title: "Arquitectura de referencia segura"
+    sections:
+      - domain: "Cloud Concepts and Architecture"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Diseñar con CSA CCM como baseline."
+          - "Segmentar tenants y ambientes."
+          - "Planear identidad federada cloud."
+          - "Documentar threat model cloud."
+  - week: 3
+    title: "Seguridad de datos en la nube"
+    sections:
+      - domain: "Cloud Data Security"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Clasificar datos y aplicar DLP."
+          - "Cifrar con BYOK/HYOK donde aplique."
+          - "Gestionar claves con HSM/KMS."
+          - "Trazar linaje y residencia."
+  - week: 4
+    title: "Plataforma e infraestructura"
+    sections:
+      - domain: "Cloud Platform and Infrastructure"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Endurecer hipervisores y contenedores."
+          - "Asegurar зачастую con CSPM."
+          - "Proteger workloads serverless."
+          - "Auditar configuraciones con benchmarks."
+  - week: 5
+    title: "AppSec cloud-native"
+    sections:
+      - domain: "Cloud Application Security"
+        weight: "10%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Validar SDLC con gates de seguridad."
+          - "Probar APIs con OWASP API Top 10."
+          - "Firmar artefactos y SBOM."
+          - "Correr SAST/DAST en CI."
+  - week: 6
+    title: "Operaciones y respuesta"
+    sections:
+      - domain: "Operations"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Operar SOC cloud con logs centralizados."
+          - "Responder a incidentes multi-tenant."
+          - "Gestionar parches en PaaS/SaaS."
+          - "Probar DR cloud semestralmente."
+  - week: 7
+    title: "Legal, privacidad y compliance"
+    sections:
+      - domain: "Legal and Compliance"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Mapear GDPR/CCPA a controles cloud."
+          - "Gestionar eDiscovery y holds."
+          - "Evaluar certificaciones del proveedor."
+          - "Redactar cláusulas de DPA."
+  - week: 8
+    title: "Simulacro final CCSP"
+    sections:
+      - domain: "Cloud Data Security"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro de 125 preguntas en 3 horas."
+          - "Cerrar gaps en legal y datos."
+          - "Repasar el outline 2026."
+          - "Checklist logístico Pearson VUE."
+`,
+  "ceh": `
+id: "ceh"
+provider: "EC-Council"
+provider_color: "#1F3864"
+title: "CEH – Certified Ethical Hacker"
+code: "312-50"
+cost: "$1199 USD"
+default_priority: 3
+popularity: 4
+summary: "Credencial hacker ético: reconocimiento, escaneo, explotación, web, wireless, crypto y cloud (125Q, 4h)."
+meta:
+  exam_version: "Guía vigente (ANS)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.eccouncil.org/"
+  format: "125 preguntas · 4 horas · 60–85% según forma · Pearson VUE"
+  passing_score: "60–85% según forma (verificar)"
+  domains:
+    - "Reconnaissance"
+    - "Scanning and Enumeration"
+    - "System Hacking"
+    - "Web and Wireless"
+    - "Cryptography"
+    - "Cloud and AI Attacks"
+  validity_years: 3
+  recert_window: "120 ECE en 3 años + membresía anual"
+  recert_options:
+    - "Juntar 120 créditos ECE"
+  recert_discount: "Sin descuento documentado"
+  level: "200 · Core"
+  career_paths:
+    - "Ethical Hacker"
+    - "Penetration Tester"
+  versions: []
+  verified_sources:
+    - url: "https://www.eccouncil.org/"
+      date_last_fetched: "2026-09-09"
+      label: "EC-Council — portal oficial de certificaciones"
+weeks:
+  - week: 1
+    title: "Footprinting y reconocimiento"
+    sections:
+      - domain: "Reconnaissance"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Recolectar OSINT pasivo del objetivo."
+          - "Enumerar DNS, subdominios y empleados."
+          - "Mapear superficie sin hacer ruido."
+          - "Documentar hallazgos iniciales."
+  - week: 2
+    title: "Escaneo y enumeración"
+    sections:
+      - domain: "Scanning and Enumeration"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Escanear con Nmap y el Simple Port Scanner."
+          - "Enumerar SNMP, SMB y NetBIOS."
+          - "Detectar OS y servicios."
+          - "Priorizar vectores por exploitabilidad."
+  - week: 3
+    title: "System hacking y malware"
+    sections:
+      - domain: "System Hacking"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Atacar passwords con el Hash Cracker."
+          - "Escalar y mantener acceso en lab."
+          - "Analizar malware a alto nivel."
+          - "Cubrir huellas según reglas."
+  - week: 4
+    title: "Web y wireless"
+    sections:
+      - domain: "Web and Wireless"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Explotar OWASP Top 10 en lab."
+          - "Atacar WPA2 y evil twins."
+          - "Interceptar con MITM controlado."
+          - "Reportar con severidad CVSS."
+  - week: 5
+    title: "Cripto y evasión"
+    sections:
+      - domain: "Cryptography"
+        weight: "10%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Romper cifrados débiles de ejemplo."
+          - "Ocultar datos con la Steganography Multi-Tool."
+          - "Detectar IDS/IPS y evadir en lab."
+          - "Tunelizar tráfico de forma legítima."
+  - week: 6
+    title: "Cloud y ataques IA"
+    sections:
+      - domain: "Cloud and AI Attacks"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Enumerar S3 buckets y roles expuestos."
+          - "Escapar contenedores en lab."
+          - "Probar prompt injection básico."
+          - "Auditar recrursos cloud comunes."
+  - week: 7
+    title: "Metodología y reporte CEH"
+    sections:
+      - domain: "Reconnaissance"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Seguir las 5 fases en cada ejercicio."
+          - "Usar las 250+ herramientas por categoría."
+          - "Redactar reporte estilo EC-Council."
+          - "Repasar glosario de herramientas."
+  - week: 8
+    title: "Simulacro final 312-50"
+    sections:
+      - domain: "System Hacking"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro de 125 preguntas en 4 horas."
+          - "Memorizar herramientas por escenario."
+          - "Cerrar gaps en web y wireless."
+          - "Checklist logístico Pearson VUE."
+`,
 };
 
 function fromYaml<T>(raw: string): T | null {
