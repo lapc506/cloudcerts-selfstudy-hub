@@ -39,7 +39,7 @@ import { sidebarNavy } from "../quarks";
 // Adaptación: categorías = providers; cada fila lleva checkbox + rating.
 
 const item = {
-  py: "2px",
+  py: 0,
   px: 3,
   color: sidebarNavy.rowText,
   "&:hover, &:focus": {
