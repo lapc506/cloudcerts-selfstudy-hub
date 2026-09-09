@@ -1,0 +1,27 @@
+name: E2E (Tauri + WebdriverIO)
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  e2e-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Tauri system deps + xvfb
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf xvfb
+
+      - run: npm ci
+      - run: npx tauri build
+      - run: xvfb-run -a npx wdio run wdio.conf.ts
