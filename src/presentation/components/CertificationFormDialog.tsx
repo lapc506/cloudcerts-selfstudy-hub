@@ -264,12 +264,12 @@ ${pts}`;
           </Alert>
         )}
 
-        <Typography variant="subtitle1" fontWeight={700}>General</Typography>
+        <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>General</Typography>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <TextField fullWidth label="ID (slug único)" value={id} onChange={(e) => setId(e.target.value)} placeholder="cncf-kt" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <Autocomplete
               freeSolo
               options={providers}
@@ -278,17 +278,17 @@ ${pts}`;
               renderInput={(p) => <TextField {...p} fullWidth label="Provider" />}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <TextField fullWidth label="Título" value={title} onChange={(e) => setTitle(e.target.value)} />
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid size={{ xs: 12, sm: 3 }}>
             <TextField fullWidth label="Code" value={code} onChange={(e) => setCode(e.target.value)} />
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid size={{ xs: 12, sm: 3 }}>
             <TextField fullWidth label="Costo" value={cost} onChange={(e) => setCost(e.target.value)} placeholder="$250 USD" />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Stack direction="row" spacing={1} alignItems="center">
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
               <TextField
                 label="Color"
                 value={providerColor}
@@ -303,57 +303,57 @@ ${pts}`;
               />
             </Stack>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Stack direction="row" spacing={1} alignItems="center" sx={{ height: "100%" }}>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <Stack direction="row" spacing={1} sx={{ height: "100%", alignItems: "center" }}>
               <Typography variant="body2" color="text.secondary">Prioridad</Typography>
               <PriorityRating value={priority} onChange={setPriority} />
             </Stack>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Stack direction="row" spacing={1} alignItems="center" sx={{ height: "100%" }}>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <Stack direction="row" spacing={1} sx={{ height: "100%", alignItems: "center" }}>
               <Typography variant="body2" color="text.secondary">Popularidad</Typography>
               <PriorityRating value={popularity} onChange={setPopularity} glyph="🔥" label="Popularidad" />
             </Stack>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <TextField fullWidth multiline minRows={2} label="Summary" value={summary} onChange={(e) => setSummary(e.target.value)} />
           </Grid>
         </Grid>
 
         <Divider />
-        <Typography variant="subtitle1" fontWeight={700}>Meta (guía oficial)</Typography>
+        <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>Meta (guía oficial)</Typography>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <TextField fullWidth label="Exam version" value={examVersion} onChange={(e) => setExamVersion(e.target.value)} />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField fullWidth type="date" label="Guide date" value={guideDate} onChange={(e) => setGuideDate(e.target.value)} InputLabelProps={{ shrink: true }} />
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField fullWidth type="date" label="Guide date" value={guideDate} onChange={(e) => setGuideDate(e.target.value)} slotProps={{ inputLabel: { shrink: true } }} />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <TextField fullWidth label="Guide source (URL)" value={guideSource} onChange={(e) => setGuideSource(e.target.value)} />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <TextField fullWidth label="Format" value={format} onChange={(e) => setFormat(e.target.value)} placeholder="60 preguntas · 90 min · multiple choice" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <TextField fullWidth label="Passing score" value={passingScore} onChange={(e) => setPassingScore(e.target.value)} placeholder="75%" />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <TextField fullWidth multiline minRows={2} label="Domains (uno por línea, con peso %)" value={domains} onChange={(e) => setDomains(e.target.value)} placeholder="Fundamentals: 20%" />
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid size={{ xs: 12, sm: 4 }}>
             <TextField fullWidth type="number" label="Validez (años)" value={validityYears} onChange={(e) => setValidityYears(e.target.value)} />
           </Grid>
-          <Grid item xs={12} sm={8}>
+          <Grid size={{ xs: 12, sm: 8 }}>
             <TextField fullWidth label="Recert window" value={recertWindow} onChange={(e) => setRecertWindow(e.target.value)} />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <TextField fullWidth multiline minRows={2} label="Recert options (una por línea)" value={recertOptions} onChange={(e) => setRecertOptions(e.target.value)} />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <TextField fullWidth label="Recert discount" value={recertDiscount} onChange={(e) => setRecertDiscount(e.target.value)} />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <FormControl fullWidth>
               <InputLabel>Nivel</InputLabel>
               <Select value={level} label="Nivel" onChange={(e) => setLevel(e.target.value)}>
@@ -363,14 +363,14 @@ ${pts}`;
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <TextField fullWidth multiline minRows={2} label="Versions (una por línea: CODE | nota)" value={versions} onChange={(e) => setVersions(e.target.value)} placeholder="v1.0 | Guía vigente" />
           </Grid>
         </Grid>
 
         <Divider />
-        <Stack direction="row" alignItems="center" justifyContent="space-between">
-          <Typography variant="subtitle1" fontWeight={700}>Verified sources (PDF oficial)</Typography>
+        <Stack direction="row" sx={{ alignItems: "center", justifyContent: "space-between" }}>
+          <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>Verified sources (PDF oficial)</Typography>
           <IconButton
             size="small"
             title="Agregar fuente"
@@ -380,17 +380,17 @@ ${pts}`;
           </IconButton>
         </Stack>
         {sources.map((s, i) => (
-          <Grid container spacing={2} key={i} alignItems="center">
-            <Grid item xs={12} sm={6}>
+          <Grid container spacing={2} key={i} sx={{ alignItems: "center" }}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField fullWidth label={`URL PDF ${i + 1}`} value={s.url} onChange={(e) => setSource(i, { url: e.target.value })} />
             </Grid>
-            <Grid item xs={12} sm={3}>
+            <Grid size={{ xs: 12, sm: 3 }}>
               <TextField fullWidth label="Label" value={s.label} onChange={(e) => setSource(i, { label: e.target.value })} />
             </Grid>
-            <Grid item xs={10} sm={2}>
-              <TextField fullWidth type="date" label="Fetched" value={s.date} onChange={(e) => setSource(i, { date: e.target.value })} InputLabelProps={{ shrink: true }} />
+            <Grid size={{ xs: 10, sm: 2 }}>
+              <TextField fullWidth type="date" label="Fetched" value={s.date} onChange={(e) => setSource(i, { date: e.target.value })} slotProps={{ inputLabel: { shrink: true } }} />
             </Grid>
-            <Grid item xs={2} sm={1}>
+            <Grid size={{ xs: 2, sm: 1 }}>
               <IconButton size="small" title="Quitar" onClick={() => setSources((ss) => ss.filter((_, j) => j !== i))}>
                 <Delete />
               </IconButton>
@@ -399,21 +399,21 @@ ${pts}`;
         ))}
 
         <Divider />
-        <Typography variant="subtitle1" fontWeight={700}>Semanas (8) con Bloom / Kirkpatrick</Typography>
+        <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>Semanas (8) con Bloom / Kirkpatrick</Typography>
         {weeks.map((w, i) => (
           <Box key={i} sx={{ border: "1px solid", borderColor: "divider", borderRadius: 2, p: 2 }}>
             <Typography variant="subtitle2" sx={{ mb: 1 }}>Semana {i + 1}</Typography>
             <Grid container spacing={2}>
-              <Grid item xs={12}>
+              <Grid size={12}>
                 <TextField fullWidth label="Título" value={w.title} onChange={(e) => setWeek(i, { title: e.target.value })} />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <TextField fullWidth label="Dominio" value={w.domain} onChange={(e) => setWeek(i, { domain: e.target.value })} />
               </Grid>
-              <Grid item xs={6} sm={2}>
+              <Grid size={{ xs: 6, sm: 2 }}>
                 <TextField fullWidth label="Peso" value={w.weight} onChange={(e) => setWeek(i, { weight: e.target.value })} placeholder="20%" />
               </Grid>
-              <Grid item xs={6} sm={2}>
+              <Grid size={{ xs: 6, sm: 2 }}>
                 <FormControl fullWidth>
                   <InputLabel>Bloom</InputLabel>
                   <Select value={w.bloom} label="Bloom" onChange={(e) => setWeek(i, { bloom: e.target.value })}>
@@ -424,7 +424,7 @@ ${pts}`;
                   </Select>
                 </FormControl>
               </Grid>
-              <Grid item xs={6} sm={2}>
+              <Grid size={{ xs: 6, sm: 2 }}>
                 <FormControl fullWidth>
                   <InputLabel>Kirk.</InputLabel>
                   <Select value={w.kirkpatrick} label="Kirk." onChange={(e) => setWeek(i, { kirkpatrick: e.target.value })}>
@@ -435,7 +435,7 @@ ${pts}`;
                   </Select>
                 </FormControl>
               </Grid>
-              <Grid item xs={12}>
+              <Grid size={12}>
                 <TextField fullWidth multiline minRows={3} label="Puntos (uno por línea)" value={w.points} onChange={(e) => setWeek(i, { points: e.target.value })} />
               </Grid>
             </Grid>

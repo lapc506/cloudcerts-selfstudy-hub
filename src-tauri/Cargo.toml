@@ -15,6 +15,7 @@ tauri-build = { version = "2", features = [] }
 [dependencies]
 tauri = { version = "2", features = [] }
 tauri-plugin-sql = { version = "2", features = ["sqlite"] }
+tauri-plugin-wdio = "1"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 
@@ -23,3 +24,8 @@ codegen-units = 1
 lto = true
 opt-level = "s"
 strip = true
+
+[dev-dependencies]
+assert2 = "0.4.0"
+pretty_assertions = "1.4.1"
+static_assertions = "1.1.0"

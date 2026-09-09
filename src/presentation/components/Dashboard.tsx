@@ -65,7 +65,7 @@ export default function Dashboard({ state, catalog, done }: DashboardProps) {
 
       {/* KPI Cards - Molécula KpiCard */}
       <Grid container spacing={3} sx={{ mb: 3 }}>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <KpiCard
             icon={<WorkspacePremium />}
             color="primary.main"
@@ -73,7 +73,7 @@ export default function Dashboard({ state, catalog, done }: DashboardProps) {
             value={selected.length}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <KpiCard
             icon={<Schedule />}
             color="secondary.main"
@@ -81,7 +81,7 @@ export default function Dashboard({ state, catalog, done }: DashboardProps) {
             value={selected.length * 8}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <KpiCard
             icon={<AttachMoney />}
             color="success.main"
@@ -89,7 +89,7 @@ export default function Dashboard({ state, catalog, done }: DashboardProps) {
             value={`$${totalCost}`}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <KpiCard
             icon={<TrendingUp />}
             color="warning.main"
@@ -101,7 +101,7 @@ export default function Dashboard({ state, catalog, done }: DashboardProps) {
 
       <Grid container spacing={3}>
         {/* Priority distribution */}
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" sx={{ mb: 2 }}>
@@ -123,8 +123,7 @@ export default function Dashboard({ state, catalog, done }: DashboardProps) {
                     <Box key={p}>
                       <Stack
                         direction="row"
-                        justifyContent="space-between"
-                        sx={{ mb: 0.5 }}
+                        sx={{ mb: 0.5, justifyContent: "space-between" }}
                       >
                         <Typography variant="body2">
                           {priorityCaps(p)}
@@ -148,7 +147,7 @@ export default function Dashboard({ state, catalog, done }: DashboardProps) {
         </Grid>
 
         {/* Progreso de estudio por certificación */}
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <Card>
             <CardContent>
               <Typography variant="h6" sx={{ mb: 2 }}>
@@ -169,10 +168,9 @@ export default function Dashboard({ state, catalog, done }: DashboardProps) {
                       <Box key={cert.id}>
                         <Stack
                           direction="row"
-                          justifyContent="space-between"
-                          sx={{ mb: 0.5 }}
+                          sx={{ mb: 0.5, justifyContent: "space-between" }}
                         >
-                          <Typography variant="body2" fontWeight={600}>
+                          <Typography variant="body2" sx={{ fontWeight: 600 }}>
                             {cert.code} · {cert.title}
                           </Typography>
                           <Typography variant="body2" color="text.secondary">

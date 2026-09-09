@@ -13,7 +13,7 @@
 TIMEOUT ?= 300000
 
 .PHONY: help dev-tauri-build prod-tauri-build dev-tauri-run \
-        dev-setup dev-clean ci-test ci-lint
+        dev-setup dev-clean ci-test ci-lint ci-e2e-run
 
 # ==========================================
 # Variables
@@ -49,6 +49,7 @@ help: ## Show this help message
 	@echo "$(GREEN)CI/CD$(NC)"
 	@echo "  $(YELLOW)ci-test$(NC)             Run all tests (vitest)"
 	@echo "  $(YELLOW)ci-lint$(NC)             Run linting (eslint/tsc)"
+	@echo "  $(YELLOW)ci-e2e-run$(NC)          Run Tauri E2E (WebdriverIO)"
 	@echo ""
 	@echo "$(GREEN)Variables$(NC)"
 	@echo "  ENV=dev|prod    Entorno por defecto: dev"
@@ -101,6 +102,10 @@ ci-test: ## Run all tests
 ci-lint: ## Run linting
 	@echo "$(BLUE)Running linting...$(NC)"
 	@npm run lint 2>&1 | tail -20
+
+ci-e2e-run: ## Run Tauri E2E (WebdriverIO, requiere binario release + display)
+	@echo "$(BLUE)Running Tauri E2E...$(NC)"
+	@npx wdio run wdio.conf.ts
 
 # Default goal
 .DEFAULT_GOAL := help

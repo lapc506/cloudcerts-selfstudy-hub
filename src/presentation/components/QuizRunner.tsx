@@ -133,7 +133,7 @@ export default function QuizRunner({ mock, questions, onExit }: QuizRunnerProps)
               const ok = sel.length === exp.length && sel.every((v, j) => v === exp[j]);
               return (
                 <Box key={q.id} sx={{ border: "1px solid", borderColor: "divider", borderRadius: 2, p: 2 }}>
-                  <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 1 }}>
+                  <Stack direction="row" spacing={1} sx={{ mb: 1, alignItems: "center" }}>
                     <Chip
                       size="small"
                       label={ok ? "Correcta" : "Revisar"}
@@ -212,7 +212,7 @@ export default function QuizRunner({ mock, questions, onExit }: QuizRunnerProps)
   return (
     <Card>
       <CardContent>
-        <Stack direction="row" alignItems="center" spacing={2} sx={{ mb: 1 }}>
+        <Stack direction="row" spacing={2} sx={{ mb: 1, alignItems: "center" }}>
           <Typography variant="h6" sx={{ flex: 1 }}>
             {mock.title}
           </Typography>

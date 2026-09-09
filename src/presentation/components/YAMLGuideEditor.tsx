@@ -94,7 +94,7 @@ const YAMLGuideEditor = forwardRef<
 
   return (
     <Box>
-      <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
+      <Stack direction="row" spacing={2} sx={{ mb: 2, alignItems: "center" }}>
         <Typography variant="h4">Editor YAML</Typography>
         <Code />
       </Stack>
@@ -189,11 +189,11 @@ const YAMLGuideEditor = forwardRef<
           value={yamlText}
           onChange={(e) => setYamlText(e.target.value)}
           sx={{ fontFamily: "JetBrains Mono, monospace", fontSize: "0.85rem" }}
-          InputProps={{ sx: { fontFamily: "JetBrains Mono, monospace" } }}
+          slotProps={{ input: { sx: { fontFamily: "JetBrains Mono, monospace" } } }}
         />
       </Paper>
 
-      <Stack direction="row" spacing={1} sx={{ mt: 2 }} alignItems="center">
+      <Stack direction="row" spacing={1} sx={{ mt: 2, alignItems: "center" }}>
         <History sx={{ fontSize: 20 }} />
         <Typography variant="caption" color="text.secondary">
           Los cambios se guardan en memoria para la sesión actual. Para persistencia

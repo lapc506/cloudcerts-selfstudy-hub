@@ -201,7 +201,7 @@ export default function CodelabsView() {
         <Chip icon={<Science />} label="Jupyter" color="primary" variant="outlined" />
       </Box>
 
-      <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mb: 3 }} alignItems={{ sm: "center" }}>
+      <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mb: 3, alignItems: { sm: "center" } }}>
         <Button variant="contained" component="label" startIcon={<UploadFile />}>
           Cargar notebook
           <input

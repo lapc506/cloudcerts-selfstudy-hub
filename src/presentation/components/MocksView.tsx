@@ -109,13 +109,13 @@ export default function MocksView({
       ) : (
         <Grid container spacing={3} sx={{ mb: 4 }}>
           {mocks.map((m) => (
-            <Grid item xs={12} sm={6} md={4} key={m.id}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={m.id}>
               <Card sx={{ height: "100%" }}>
                 <CardContent>
                   <Typography variant="h6" sx={{ lineHeight: 1.3, mb: 1 }}>
                     {m.title}
                   </Typography>
-                  <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap sx={{ mb: 2 }}>
+                  <Stack direction="row" spacing={1} useFlexGap sx={{ mb: 2, flexWrap: "wrap" }}>
                     <Chip size="small" label={m.certId} variant="outlined" />
                     <Chip
                       size="small"
@@ -171,10 +171,10 @@ export default function MocksView({
           </Typography>
           <Grid container spacing={2} sx={{ mb: 4 }}>
             {practice.map((p) => (
-              <Grid item xs={12} sm={6} md={4} key={p.code}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={p.code}>
                 <Card variant="outlined">
                   <CardContent sx={{ py: 1.5 }}>
-                    <Stack direction="row" spacing={1} alignItems="center">
+                    <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
                       <Chip size="small" label={p.code} variant="outlined" />
                       <Typography variant="body2" sx={{ flex: 1 }} noWrap title={p.title}>
                         {p.title}
@@ -200,10 +200,10 @@ export default function MocksView({
 
       <Grid container spacing={3}>
         {RESOURCES.map((r) => (
-          <Grid item xs={12} sm={6} md={4} key={r.url}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={r.url}>
             <Card sx={{ height: "100%" }}>
               <CardContent>
-                <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 1 }}>
+                <Stack direction="row" spacing={1} sx={{ mb: 1, alignItems: "center" }}>
                   <Typography variant="h6" sx={{ flex: 1, lineHeight: 1.3 }}>
                     {r.title}
                   </Typography>

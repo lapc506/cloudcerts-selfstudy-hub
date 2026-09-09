@@ -73,17 +73,17 @@ export default function PlanView({ state, catalog, done, onOpenGuide }: PlanView
                   <Stack
                     direction={{ xs: "column", sm: "row" }}
                     spacing={2}
-                    alignItems={{ sm: "center" }}
+                    sx={{ alignItems: { sm: "center" } }}
                   >
                     <Avatar sx={{ bgcolor: cert.providerColor, width: 44, height: 44 }}>
                       {cert.title.charAt(0)}
                     </Avatar>
                     <Box sx={{ flex: 1, minWidth: 0 }}>
-                      <Stack direction="row" spacing={1} alignItems="center">
+                      <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
                         <Typography variant="h6">{cert.title}</Typography>
                         <Chip size="small" label={cert.code} variant="outlined" />
                       </Stack>
-                      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap sx={{ mt: 1 }}>
+                      <Stack direction="row" spacing={1} useFlexGap sx={{ mt: 1, flexWrap: "wrap" }}>
                         <Chip size="small" label={cert.provider} />
                         <Chip
                           size="small"
@@ -105,7 +105,7 @@ export default function PlanView({ state, catalog, done, onOpenGuide }: PlanView
                           />
                         )}
                       </Stack>
-                      <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mt: 1 }}>
+                      <Stack direction="row" spacing={1.5} sx={{ mt: 1, alignItems: "center" }}>
                         <LinearProgress
                           variant="determinate"
                           value={pct}

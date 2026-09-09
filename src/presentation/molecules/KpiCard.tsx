@@ -14,7 +14,7 @@ export default function KpiCard({ icon, color, label, value }: KpiCardProps) {
   return (
     <Card>
       <CardContent>
-        <Stack direction="row" alignItems="center" spacing={2}>
+        <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
           <Avatar sx={{ bgcolor: color }}>{icon}</Avatar>
           <Box>
             <Typography variant="body2" color="text.secondary">

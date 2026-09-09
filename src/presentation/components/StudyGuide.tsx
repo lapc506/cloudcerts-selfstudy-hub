@@ -95,7 +95,7 @@ function WeekSectionAccordions({
           disableGutters
           defaultExpanded={i === 0}
           variant="outlined"
-          TransitionProps={{ unmountOnExit: true }}
+          slotProps={{ transition: { unmountOnExit: true } }}
           sx={{
             borderColor: "divider",
             "&.MuiAccordion-root:before": { display: "none" },
@@ -109,7 +109,7 @@ function WeekSectionAccordions({
               "& .MuiAccordionSummary-content": { m: "6px 0" },
             }}
           >
-            <Stack direction="row" spacing={1} alignItems="center">
+            <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
               <Category sx={{ width: 16, height: 16, color: "text.secondary" }} />
               <Typography variant="subtitle2">{s.domain}</Typography>
               {s.weight && (
@@ -191,12 +191,12 @@ function WeekAccordion({
       key={w.week}
       expanded={expanded}
       onChange={(_, v) => setExpanded(v)}
-      TransitionProps={{ unmountOnExit: true }}
+      slotProps={{ transition: { unmountOnExit: true } }}
       sx={{ mb: 0 }}
     >
       <AccordionSummary expandIcon={<ExpandMore />}>
-        <Stack direction="row" spacing={1} alignItems="center">
-          <Typography fontWeight={700}>
+        <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
+          <Typography sx={{ fontWeight: 700 }}>
             Semana {w.week}: {w.title}
           </Typography>
           {hasSections && (
@@ -242,7 +242,7 @@ function CertificationMetaPanel({ cert }: { cert: Certification }) {
   return (
     <Paper variant="outlined" sx={{ p: 2.5, mb: 3, borderColor: "divider" }}>
       <Stack spacing={2}>
-        <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+        <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: "wrap" }}>
           <Chip
             size="small"
             color="info"
@@ -274,7 +274,7 @@ function CertificationMetaPanel({ cert }: { cert: Certification }) {
             <Typography variant="subtitle2" gutterBottom>
               Dominios del examen
             </Typography>
-            <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+            <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: "wrap" }}>
               {meta.domains.map((d) => (
                 <Chip key={d} size="small" variant="outlined" label={d} />
               ))}
@@ -287,7 +287,7 @@ function CertificationMetaPanel({ cert }: { cert: Certification }) {
             <Typography variant="subtitle2" gutterBottom>
               Career path
             </Typography>
-            <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+            <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: "wrap" }}>
               {meta.careerPaths.map((c) => (
                 <Chip key={c} size="small" color="primary" variant="outlined" label={c} />
               ))}
@@ -302,7 +302,7 @@ function CertificationMetaPanel({ cert }: { cert: Certification }) {
               <Typography variant="subtitle2" gutterBottom>
                 Control de versiones del examen
               </Typography>
-              <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+              <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: "wrap" }}>
                 {meta.versions.map((v) => (
                   <Chip
                     key={v.code + v.note}
@@ -361,7 +361,7 @@ function CertificationMetaPanel({ cert }: { cert: Certification }) {
               </Typography>
               <Stack spacing={0.5}>
                 {meta.verifiedSources.map((v) => (
-                  <Stack key={v.url} direction="row" spacing={1} alignItems="center">
+                  <Stack key={v.url} direction="row" spacing={1} sx={{ alignItems: "center" }}>
                     <Verified sx={{ fontSize: 14 }} color="success" />
                     <Link
                       href={v.url}
@@ -436,9 +436,7 @@ const StudyGuide = forwardRef<StudyGuideHandle, StudyGuideProps>(function StudyG
       <Stack
         direction={{ xs: "column", md: "row" }}
         spacing={2}
-        alignItems={{ md: "center" }}
-        justifyContent="space-between"
-        sx={{ mb: 3 }}
+        sx={{ mb: 3, alignItems: { md: "center" }, justifyContent: "space-between" }}
       >
         <Box>
           <Typography variant="h4">Guías de Estudio</Typography>
@@ -469,12 +467,12 @@ const StudyGuide = forwardRef<StudyGuideHandle, StudyGuideProps>(function StudyG
         return (
           <Card key={cert.id} sx={{ mb: 4, overflow: "visible" }}>
             <CardContent sx={{ p: 3 }}>
-              <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
+              <Stack direction="row" spacing={2} sx={{ mb: 2, alignItems: "center" }}>
                 <Avatar sx={{ bgcolor: cert.providerColor, width: 48, height: 48 }}>
                   {cert.title.charAt(0)}
                 </Avatar>
                 <Box sx={{ flex: 1 }}>
-                  <Stack direction="row" spacing={1} alignItems="center">
+                  <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
                     <Typography variant="h5">{cert.title}</Typography>
                     <Chip size="small" label={cert.code} variant="outlined" />
                   </Stack>
@@ -492,20 +490,20 @@ const StudyGuide = forwardRef<StudyGuideHandle, StudyGuideProps>(function StudyG
               <CertificationMetaPanel cert={cert} />
 
               <Grid container spacing={2} sx={{ mb: 2 }}>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                   <Chip icon={<Schedule />} label="8 semanas" />
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                   <Chip icon={<AttachMoney />} label={cert.cost} />
                 </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                   <Chip icon={<Book />} label="Plan estructurado" />
                 </Grid>
               </Grid>
 
               {certIds.length > 0 && (
                 <Box sx={{ mb: 2 }}>
-                  <Stack direction="row" justifyContent="space-between" sx={{ mb: 0.5 }}>
+                  <Stack direction="row" sx={{ mb: 0.5, justifyContent: "space-between" }}>
                     <Typography variant="body2" color="text.secondary">
                       Progreso de estudio
                     </Typography>

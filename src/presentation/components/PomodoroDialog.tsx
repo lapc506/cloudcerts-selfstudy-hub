@@ -106,7 +106,7 @@ export default function PomodoroDialog({ open, onClose }: PomodoroDialogProps) {
   return (
     <Dialog open={open} onClose={onClose} fullWidth maxWidth="xs">
       <DialogTitle>
-        <Stack direction="row" spacing={1} alignItems="center">
+        <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
           <Timer size={22} />
           <span>Pomodoro</span>
           <Typography variant="caption" color="text.secondary">
@@ -123,7 +123,7 @@ export default function PomodoroDialog({ open, onClose }: PomodoroDialogProps) {
           {String(mm).padStart(2, "0")}:{String(ss).padStart(2, "0")}
         </Typography>
         <LinearProgress variant="determinate" value={Math.min(100, Math.max(0, pct))} sx={{ mb: 2 }} />
-        <Stack direction="row" spacing={1} justifyContent="center" sx={{ mb: 2 }}>
+        <Stack direction="row" spacing={1} sx={{ mb: 2, justifyContent: "center" }}>
           <Button
             variant={running ? "outlined" : "contained"}
             startIcon={running ? <Pause /> : <PlayArrow />}

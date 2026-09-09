@@ -52,7 +52,7 @@ export default function BadgesView({ state, catalog }: BadgesViewProps) {
       ) : (
         <Grid container spacing={3}>
           {selected.map((cert) => (
-            <Grid item xs={12} sm={6} md={4} key={cert.id}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={cert.id}>
               <Card sx={{ height: "100%" }}>
                 <CardContent sx={{ textAlign: "center" }}>
                   {cert.meta?.badgeImage ? (
@@ -94,10 +94,8 @@ export default function BadgesView({ state, catalog }: BadgesViewProps) {
                   <Stack
                     direction="row"
                     spacing={1}
-                    justifyContent="center"
-                    flexWrap="wrap"
                     useFlexGap
-                    sx={{ mt: 1.5 }}
+                    sx={{ mt: 1.5, justifyContent: "center", flexWrap: "wrap" }}
                   >
                     <Chip size="small" label="Achievement" color="primary" />
                     <Chip
@@ -111,10 +109,8 @@ export default function BadgesView({ state, catalog }: BadgesViewProps) {
                     <Stack
                       direction="row"
                       spacing={0.5}
-                      justifyContent="center"
-                      flexWrap="wrap"
                       useFlexGap
-                      sx={{ mt: 1 }}
+                      sx={{ mt: 1, justifyContent: "center", flexWrap: "wrap" }}
                     >
                       {(cert.meta?.domains.slice(0, 3) ?? []).map((d) => (
                         <Chip key={d} size="small" variant="outlined" label={d.split(":")[0]} />

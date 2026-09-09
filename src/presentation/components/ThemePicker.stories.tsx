@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, screen } from "storybook/test";
 import ThemePicker from "./ThemePicker";
 import AppThemeHost from "../AppThemeHost";
 import type { ISettingsStore } from "../../domain";
@@ -28,3 +29,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Open: Story = {};
+
+export const ToggleLightMode: Story = {
+  play: async ({ step, userEvent }) => {
+    // El Dialog renderiza en un portal: se consulta con `screen`, no con `canvas`.
+    await step("Activar modo claro", async () => {
+      await userEvent.click(screen.getByRole("switch"));
+      await expect(screen.getByText("Modo claro")).toBeInTheDocument();
+    });
+  },
+};

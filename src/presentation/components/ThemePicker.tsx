@@ -41,7 +41,7 @@ export default function ThemePicker({ open, onClose }: ThemePickerProps) {
   return (
     <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
       <DialogTitle>
-        <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Stack direction="row" sx={{ alignItems: "center", justifyContent: "space-between" }}>
           <Typography variant="h6">Personalizar tema</Typography>
           <IconButton onClick={onClose} size="small">
             <Close />
@@ -74,7 +74,7 @@ export default function ThemePicker({ open, onClose }: ThemePickerProps) {
             <Typography variant="subtitle2" color="text.secondary" gutterBottom>
               Color semilla (Material Theme Builder)
             </Typography>
-            <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+            <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: "wrap" }}>
               {SEED_COLORS.map((color) => (
                 <Tooltip key={color} title={color.toUpperCase()}>
                   <Box
@@ -116,7 +116,7 @@ export default function ThemePicker({ open, onClose }: ThemePickerProps) {
             <Typography variant="subtitle2" color="text.secondary" gutterBottom>
               Paleta tonal generada
             </Typography>
-            <Stack direction="row" spacing={0.5} alignItems="stretch">
+            <Stack direction="row" spacing={0.5} sx={{ alignItems: "stretch" }}>
               {tones.map((t, i) => (
                 <Box
                   key={i}

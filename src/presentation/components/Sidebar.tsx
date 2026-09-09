@@ -190,7 +190,7 @@ export default function Sidebar({
       <List disablePadding sx={{ flex: 1, overflow: "auto" }}>
         <ListItem sx={{ ...item, ...itemCategory, color: "#fff" }}>
           <Bolt sx={{ mr: 1, color: theme.palette.primary.light }} />
-          <Typography variant="body2" fontWeight={600} sx={{ lineHeight: 1.35 }}>
+          <Typography variant="body2" sx={{ lineHeight: 1.35, fontWeight: 600 }}>
             Catálogo de certificaciones
           </Typography>
         </ListItem>
@@ -217,7 +217,7 @@ export default function Sidebar({
                 </Box>
                 <ListItemText
                   primary={s.title}
-                  primaryTypographyProps={{ sx: { color: "#fff", fontWeight: 600 } }}
+                  slotProps={{ primary: { sx: { color: "#fff", fontWeight: 600 } } }}
                 />
               </ListItem>
               {!collapsed &&
@@ -274,22 +274,24 @@ export default function Sidebar({
                         <ListItemText
                           primary={cert.code}
                           secondary={cert.title}
-                          primaryTypographyProps={{
-                            variant: "body2",
-                            fontWeight: 700,
-                            sx: {
-                              overflow: "hidden",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
+                          slotProps={{
+                            primary: {
+                              variant: "body2",
+                              sx: {
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                                fontWeight: 700,
+                              },
                             },
-                          }}
-                          secondaryTypographyProps={{
-                            variant: "caption",
-                            sx: {
-                              color: sidebarNavy.faintText,
-                              overflow: "hidden",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
+                            secondary: {
+                              variant: "caption",
+                              sx: {
+                                color: sidebarNavy.faintText,
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                              },
                             },
                           }}
                         />

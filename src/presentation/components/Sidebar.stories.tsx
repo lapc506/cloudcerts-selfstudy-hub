@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, fn } from "storybook/test";
 import Sidebar from "./Sidebar";
 import { certificationRepository } from "../../infrastructure/yamlCertificationRepository";
 import type { UserState } from "../../domain";
@@ -46,4 +47,17 @@ export const PriorityGroups: Story = {
 
 export const DifficultyGroups: Story = {
   args: { groupBy: "difficulty" },
+};
+
+export const InterestToggle: Story = {
+  args: { onToggleInterest: fn() },
+  play: async ({ args, canvas, userEvent }) => {
+    const boxes = canvas.getAllByRole("checkbox");
+    await userEvent.click(boxes[0]);
+    // catalog[0] (aws-clf) no está en selectedGuides → el clic lo marca (true).
+    await expect(args.onToggleInterest).toHaveBeenCalledWith(
+      catalog[0].id,
+      true
+    );
+  },
 };
