@@ -1,0 +1,94 @@
+# Proyectos de portafolio por certificación (curaduría).
+# Fuente: CarterPerez-dev/Cybersecurity-Projects (70 proyectos + 10 roadmaps).
+# Solo URLs verificadas. Certs sin entrada no muestran sección (sin inventos).
+version: 1
+repo: "https://github.com/CarterPerez-dev/Cybersecurity-Projects"
+roadmaps_index: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/README.md"
+certs:
+  sec-plus:
+    projects:
+      - name: "Hash Identifier"
+        tier: "foundations"
+        hours: "2-4h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/foundations/hash-identifier"
+      - name: "HTTP Headers Scanner"
+        tier: "foundations"
+        hours: "3-5h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/foundations/http-headers-scanner"
+      - name: "Password Manager"
+        tier: "foundations"
+        hours: "6-8h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/foundations/password-manager"
+      - name: "DNS Lookup CLI"
+        tier: "beginner"
+        hours: "2-3h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/dns-lookup"
+    roadmaps:
+      - label: "SOC Analyst"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/SOC-ANALYST.md"
+  cysa-plus:
+    projects:
+      - name: "Network Traffic Analyzer"
+        tier: "beginner"
+        hours: "3-5h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/network-traffic-analyzer/python"
+      - name: "Simple Vulnerability Scanner"
+        tier: "beginner"
+        hours: "3-4h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/simple-vulnerability-scanner"
+      - name: "Canary Token Generator"
+        tier: "beginner"
+        hours: "2-3h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/canary-token-generator"
+    roadmaps:
+      - label: "SOC Analyst"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/SOC-ANALYST.md"
+      - label: "Incident Responder"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/INCIDENT-RESPONDER.md"
+  pentest-plus:
+    projects:
+      - name: "Simple Port Scanner"
+        tier: "beginner"
+        hours: "2-4h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/simple-port-scanner"
+      - name: "Hash Cracker"
+        tier: "beginner"
+        hours: "3-4h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/hash-cracker"
+      - name: "Caesar Cipher"
+        tier: "beginner"
+        hours: "1-2h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/caesar-cipher"
+    roadmaps:
+      - label: "Penetration Tester"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/PENTESTER.md"
+  securityx:
+    projects: []
+    roadmaps:
+      - label: "Security Architect"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/SECURITY-ARCHITECT.md"
+  cissp:
+    projects: []
+    roadmaps:
+      - label: "Security Architect"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/SECURITY-ARCHITECT.md"
+      - label: "GRC Analyst"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/GRC-ANALYST.md"
+  ccsp:
+    projects: []
+    roadmaps:
+      - label: "Cloud Security Engineer"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/CLOUD-SECURITY-ENGINEER.md"
+  ceh:
+    projects:
+      - name: "Simple Port Scanner"
+        tier: "beginner"
+        hours: "2-4h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/simple-port-scanner"
+      - name: "Hash Cracker"
+        tier: "beginner"
+        hours: "3-4h"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/PROJECTS/beginner/hash-cracker"
+    roadmaps:
+      - label: "Penetration Tester"
+        url: "https://github.com/CarterPerez-dev/Cybersecurity-Projects/blob/main/ROADMAPS/PENTESTER.md"

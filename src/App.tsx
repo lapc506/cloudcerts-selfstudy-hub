@@ -35,6 +35,7 @@ const YAMLGuideEditor = lazy(() => import("./presentation/components/YAMLGuideEd
 const BadgesView = lazy(() => import("./presentation/components/BadgesView"));
 const CodelabsView = lazy(() => import("./presentation/components/CodelabsView"));
 const MocksView = lazy(() => import("./presentation/components/MocksView"));
+const PortfolioView = lazy(() => import("./presentation/components/PortfolioView"));
 
 export default function App() {
   const [view, setView] = useState<View>("home");
@@ -242,6 +243,9 @@ export default function App() {
                 .map((c) => EXAMTOPICS_PRACTICE.find((p) => p.code === c.code))
                 .filter((p): p is (typeof EXAMTOPICS_PRACTICE)[number] => !!p)}
             />
+          )}
+          {view === "portfolio" && (
+            <PortfolioView state={state} catalog={catalog} />
           )}
           </Suspense>
         </Box>

@@ -19,12 +19,14 @@ import {
   Science,
   OpenInNew,
   Quiz,
+  Work,
 } from "@mui/icons-material";
 import type { View } from "../../domain";
 import type { SidebarGroupBy } from "./Sidebar";
 import RibbonGroup, { type RibbonGroupSpec } from "../molecules/RibbonGroup";
 import { SKILLS_BOOST_URL } from "./CodelabsView";
 import { MOCK_EXAM_URL } from "./MocksView";
+import { PORTFOLIO_URL } from "./PortfolioView";
 import { ribbon } from "../quarks";
 
 // ── Ribbon — tab bar + tool area, siguiendo la anatomía de
@@ -57,6 +59,7 @@ const TABS: { value: View; label: string; icon: ReactNode }[] = [
   { value: "badges", label: "Badges", icon: <WorkspacePremium sx={{ fontSize: 16 }} /> },
   { value: "codelabs", label: "Codelabs", icon: <Science sx={{ fontSize: 16 }} /> },
   { value: "mocks", label: "Mocks", icon: <Quiz sx={{ fontSize: 16 }} /> },
+  { value: "portfolio", label: "Portafolio", icon: <Work sx={{ fontSize: 16 }} /> },
 ];
 
 export default function Ribbon({
@@ -175,6 +178,20 @@ export default function Ribbon({
                 icon: <Quiz sx={{ fontSize: ribbon.largeIcon }} />,
                 tip: "Abrir el simulacro CCDV-F",
                 onClick: () => window.open(MOCK_EXAM_URL, "_blank", "noopener"),
+              },
+            ],
+          },
+        ]
+      : view === "portfolio"
+      ? [
+          {
+            title: "Portafolio",
+            commands: [
+              {
+                label: "Abrir Cybersecurity-Projects",
+                icon: <OpenInNew sx={{ fontSize: ribbon.largeIcon }} />,
+                tip: "Abrir el repo de 70 proyectos y 10 roadmaps",
+                onClick: () => window.open(PORTFOLIO_URL, "_blank", "noopener"),
               },
             ],
           },
