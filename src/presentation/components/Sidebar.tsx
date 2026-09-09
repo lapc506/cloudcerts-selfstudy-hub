@@ -28,9 +28,8 @@ import {
   AddBoxOutlined,
   IndeterminateCheckBoxOutlined,
 } from "@mui/icons-material";
-import type { Certification, Priority, UserState } from "../../domain";
-import { parsePriority, priorityCaps } from "../../domain";
-import PriorityRating from "../atoms/PriorityRating";
+import type { Certification, UserState } from "../../domain";
+import { parsePriority, popularityFlames, priorityCaps } from "../../domain";
 import { sidebarNavy } from "../quarks";
 
 // ── Estilo Paperbase (mui/material-ui
@@ -74,7 +73,6 @@ interface SidebarProps {
   groupBy: SidebarGroupBy;
   width?: number;
   onToggleInterest: (id: string, checked: boolean) => void;
-  onChangePriority: (id: string, val: Priority) => void;
   onToggleGuide: (id: string) => void;
   onNavigateWeek: (certId: string, week: number) => void;
 }
@@ -90,7 +88,6 @@ export default function Sidebar({
   groupBy,
   width = DRAWER_WIDTH,
   onToggleInterest,
-  onChangePriority,
   onToggleGuide,
   onNavigateWeek,
 }: SidebarProps) {
@@ -175,7 +172,10 @@ export default function Sidebar({
         .map(([lv, certs]) => ({ key: `difficulty:${lv}`, title: `${lv} · ${certs.length}`, certs }));
     }
     return providers.map((provider) => {
-      const certs = catalog.filter((c) => c.provider === provider);
+      const certs = catalog
+        .filter((c) => c.provider === provider)
+        // Segunda clave de orden dentro del proveedor: popularidad desc (5🔥 → 1🔥).
+        .sort((a, b) => b.popularity - a.popularity);
       return { key: `entity:${provider}`, title: `${provider} · ${certs.length}`, certs };
     });
   }, [groupBy, catalog, state]);
@@ -307,15 +307,13 @@ export default function Sidebar({
                             },
                           }}
                         />
-                        <Box
-                          onClick={(e) => e.stopPropagation()}
-                          sx={{ display: "flex", alignItems: "center", ml: 0.5 }}
+                        <Typography
+                          variant="body2"
+                          title={`Popularidad ${cert.popularity}/5 (solo lectura; se edita en el YAML)`}
+                          sx={{ ml: 0.5, letterSpacing: 1, opacity: isSelected ? 1 : 0.45 }}
                         >
-                          <PriorityRating
-                            value={state.priority[cert.id]}
-                            onChange={(v) => onChangePriority(cert.id, v)}
-                          />
-                        </Box>
+                          {popularityFlames(cert.popularity)}
+                        </Typography>
                       </ListItemButton>
                     </Tooltip>
                   </ListItem>
