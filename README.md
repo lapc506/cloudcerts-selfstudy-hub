@@ -1,117 +1,142 @@
 # CloudCerts SelfStudy Hub
 
-Desktop study companion for cloud & AI certifications — 35 eight-week self-study guides,
-progress tracking, mock exams, and YAML-first content authoring, all offline and local-first.
+Compañero de estudio desktop para certificaciones cloud e IA — **43 guías** de autoestudio de 8 semanas,
+seguimiento de progreso, mock exams y autoría de contenido YAML-first, todo offline y local-first.
 
 [![Tauri 2](https://img.shields.io/badge/Tauri-2-24C8DB?style=flat-square&logo=tauri)](https://v2.tauri.app)
 [![React 18](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://react.dev)
-[![MUI v5](https://img.shields.io/badge/MUI-v5-007FFF?style=flat-square&logo=mui)](https://mui.com)
-[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![MUI v9](https://img.shields.io/badge/MUI-v9-007FFF?style=flat-square&logo=mui)](https://mui.com)
+[![TypeScript 7](https://img.shields.io/badge/TypeScript-7-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![SQLite](https://img.shields.io/badge/SQLite-tauri--plugin--sql-003B57?style=flat-square&logo=sqlite)](https://github.com/tauri-apps/plugins-workspace)
-[![Storybook](https://img.shields.io/badge/Storybook-%7E30%20stories-FF4785?style=flat-square&logo=storybook)](https://storybook.js.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](#license)
+[![Storybook](https://img.shields.io/badge/Storybook-34%20stories-FF4785?style=flat-square&logo=storybook)](https://storybook.js.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](#licencia)
 
-**Docs:** [PRD](./PRD.md) · [Architecture](./ARCHITECTURE.md) · [Contributing](./CONTRIBUTING.md) ·
-[AI Policy](./AI_POLICY.md) · [Code of Conduct](./CODE_OF_CONDUCT.md) · [Changelog](./CHANGELOG.md) ·
-[OpenSpec](./openspec/)
+**Docs:** [PRD](./PRD.md) · [Arquitectura](./ARCHITECTURE.md) · [Contribuir](./CONTRIBUTING.md) ·
+[Política IA](./AI_POLICY.md) · [Conducta](./CODE_OF_CONDUCT.md) · [Changelog](./CHANGELOG.md) ·
+[Estándares](./AGENTS.md) · [OpenSpec](./openspec/) · [Landing](./landing/index.html)
 
 ---
 
-## What it is
+## Qué es
 
-CloudCerts SelfStudy Hub is a **Tauri 2 desktop app** (React 18, MUI v5, Vite 5,
-TypeScript strict) that turns certification prep into a structured loop: **plan** your
-roadmap, **study** week-by-week guides, **check off** study points, **drill** mock exams,
-and **track** progress — with everything stored locally in SQLite + webview
-`localStorage`. No accounts, no telemetry, no cloud.
+CloudCerts SelfStudy Hub es una **app desktop Tauri 2** (React 18, MUI v9, Vite 5,
+TypeScript 7) que convierte la preparación de certificaciones en un ciclo estructurado:
+**planifica** tu roadmap, **estudia** guías semana a semana, **marca** puntos de estudio,
+**practica** con mock exams y **mide** tu progreso — todo guardado localmente en SQLite +
+`localStorage` del webview. Sin cuentas, sin telemetría, sin nube.
 
-The UI is in **Spanish**. Each of the 35 guides is a fixed **8-week plan** organized by
-official exam domains (with weights) and enriched with Bloom 1–6 + Kirkpatrick L1–L4 tags,
-difficulty levels (100/200/300), popularity (🔥 1–5), career paths, and verified official
-PDF sources with fetch dates.
+La UI está en **español**. Cada una de las 43 guías es un plan fijo de **8 semanas**
+organizado por dominios oficiales del examen (con pesos) y enriquecido con etiquetas
+Bloom 1–6 + Kirkpatrick L1–L4, niveles (100/200/300), popularidad (🔥 1–5), rutas de carrera
+y fuentes PDF oficiales verificadas con fecha de consulta.
 
-## Features
+## Características
 
-- **Plan de estudios (Home)** — roadmap cards with per-cert progress; click through to any week.
-- **Progreso** — KPIs, priority distribution (🎓 1–5), and per-certification tracking rows.
-- **Guías** — week accordions → exam-domain sub-accordions → clickable To-Do checkpoints
-  persisted in SQLite (`progress` table, stable IDs).
-- **Editor YAML** — author guides, question banks, and mocks as YAML (by hand or with an
-  LLM); schema validator reports path-precise errors plus pedagogy warnings.
-- **Badges** — Open Badges 3.0 explorer with real Credly badge images.
-- **Codelabs** — upload `.ipynb`, render markdown/code/text cells (never executes code),
-  attach Skills Boost links.
-- **Mocks** — local quiz runner: countdown timer, single/multi choice, domain-weighted
-  scoring vs a 70% pass bar, retry with reshuffle, and review mode with teaching
-  explanations. Banks are shareable across mocks.
-- **Shell** — Office-style ribbon (collapsible), Paperbase-style navy sidebar nav tree
-  (group by provider/priority/difficulty, navigate-to-week with auto-expand + scroll),
-  Pomodoro dialog (25/5/15), theme picker (light/dark + M3 seed palettes, SQLite-backed),
-  FAB add-certification dialog (full YAML-schema form), explicit save + Snackbar toasts.
+- **Plan de estudios (Home)** — tarjetas de roadmap con progreso por cert; navega a cualquier semana.
+- **Progreso** — KPIs, distribución de prioridad (🎓 1–5) y filas de seguimiento por certificación.
+- **Guías** — acordeones de semana → sub-acordeones por dominio → checkboxes To-Do
+  persistidos en SQLite (tabla `progress`, IDs estables).
+- **Editor YAML** — crea guías, bancos de preguntas y mocks en YAML (a mano o con un
+  LLM); el validador reporta errores con path exacto más advertencias pedagógicas.
+- **Badges** — explorador Open Badges 3.0 con imágenes reales de Credly.
+- **Codelabs** — sube `.ipynb`, renderiza celdas markdown/código/texto (nunca ejecuta código),
+  adjunta links de Skills Boost.
+- **Mocks** — quiz runner local: temporizador, opción única/múltiple, puntaje ponderado
+  por dominio vs 72% de aprobación, reintento con reordenamiento y modo revisión con
+  explicaciones. Los bancos se comparten entre mocks.
+- **Shell** — ribbon estilo Office (colapsable), sidebar navy estilo Paperbase con árbol
+  (agrupa por proveedor/prioridad/dificultad, navega-a-semana con auto-expansión + scroll),
+  diálogo Pomodoro (25/5/15), selector de tema (claro/oscuro + paletas semilla M3 en SQLite),
+  diálogo FAB para agregar certificaciones (formulario YAML-schema completo), guardado
+  explícito + toasts Snackbar.
 
-## Catalog — 35 guides
+## Catálogo — 43 guías
 
-| Provider | Certifications |
+> Requiere el merge de `feat/nvidia-professional-certs` (8 Professional NVIDIA validadas
+> contra nvidia.com el 2026-09-09).
+
+| Proveedor | Certificaciones |
 | --- | --- |
-| AWS (6) | CLF-C02 · SOA-C02 (covers SOA-C03 note) · SAA-C03 · DVA-C02 · SAP-C02 · DOP-C02 |
+| AWS (6) | CLF-C02 · SOA-C02 · SAA-C03 · DVA-C02 · SAP-C02 · DOP-C02 |
 | Google Cloud (7) | ACE · GenAI Leader · Data Practitioner · PCA · PDE · CDL · ML Engineer |
 | Azure (5) | AZ-900 · AI-901 · AZ-104 · AZ-204 · AZ-305 |
-| CNCF (5) | CKA · CKAD · OTCA · CGOA · KCA (Kyverno) |
-| NVIDIA (4) | NCA-GENL · NCA-ADS · NCA-GENM · NCA-AIIO |
+| CNCF (5) | CKA · CKAD · OTCA · CGOA · KCA |
+| NVIDIA (12) | NCA-GENL · NCA-ADS · NCA-GENM · NCA-AIIO · NCP-GENL · NCP-AAI · NCP-ADS · NCP-OUSD · NCP-AII · NCP-AIO · NCP-AIN · NCP-ARI |
 | Linux Foundation (2) | LFCS · CAPA |
-| ISTQB (2) | CTFL v4.0 · CT-AI v2.0 (lifetime validity) |
+| ISTQB (2) | CTFL v4.0 · CT-AI v2.0 (vigencia lifetime) |
 | Anthropic (2) | CCAR-F · CCDV-F |
 | Red Hat (1) | EX280 |
 | HashiCorp (1) | TA-004 |
 
-## Quickstart
+## Inicio rápido
 
-Requirements: **Node.js ≥ 20**, Rust toolchain (`cargo`), and Tauri system deps on Linux
+Requisitos: **Node.js ≥ 20**, toolchain Rust (`cargo`) y dependencias de sistema Tauri en Linux
 (`libwebkit2gtk-4.1-dev`, `build-essential`, `curl`, `wget`, `file`, `libxdo-dev`,
 `libssl-dev`, `libayatana-appindicator3-dev`, `librsvg2-dev`).
 
 ```bash
-# 1. Install JS dependencies
+# 1. Instalar dependencias JS
 npm install
 
-# 2. Browser-only dev (no Tauri; theme/progress fall back to localStorage)
+# 2. Solo navegador (sin Tauri; tema/progreso caen a localStorage)
 npm run dev              # → http://localhost:1420
 
-# 3. Desktop dev shell (compiles the Rust backend + opens the app window)
-npm run tauri:dev        # first run takes minutes — it builds all Tauri crates
+# 3. App desktop en desarrollo (compila el backend Rust + abre la ventana)
+make dev-tauri-run       # primera vez toma minutos — compila todos los crates Tauri
 
-# 4. Component library
-npm run storybook        # → http://localhost:6006 (~30 stories, atomic design)
+# 4. Librería de componentes
+npm run storybook        # → http://localhost:6006 (34 stories, atomic design)
 
-# 5. Production build (bundles land in src-tauri/target/release/bundle)
-npm run tauri:build
+# 5. Build de producción (bundles en src-tauri/target/release/bundle)
+make prod-tauri-build
 ```
 
-## Architecture
+Atajos `make`: `help` · `dev-setup` · `dev-clean` · `dev-tauri-build` · `prod-tauri-build` ·
+`dev-tauri-run` · `ci-test` · `ci-lint` · `ci-e2e-run`.
 
-Clean Architecture with a strict inward-only dependency rule
-(`presentation → application → domain`; `infrastructure` implements domain ports).
-The composition root (`src/App.tsx` + `src/main.tsx`) wires everything.
+## Tests
 
-Persistence (Linux):
+| Nivel | Comando | Qué cubre |
+| --- | --- | --- |
+| Unit (Vitest + jsdom) | `npm test -- --run` | Dominio puro + `settingsStore` vía `mockIPC` + contrato mocks Tauri (19 tests) |
+| Interacción (Storybook + Chromium) | `npx vitest run --project storybook` | 34 stories + 3 play functions (lento — solo en cambios UI) |
+| Integración Rust | `cargo test --manifest-path src-tauri/Cargo.toml` | Gate `tauri.conf.json` vs `Cargo.toml` (`assert2`, `pretty_assertions`, `static_assertions`) |
+| E2E (WebdriverIO + mocha) | `npm run test:e2e` | Smoke contra el binario real (requiere build + display; CI con xvfb) |
 
-| Data | Store |
+`npm run lint` = `tsc --noEmit`. CI en `.github/workflows/` (`ci.yml`, `e2e.yml`, `release.yml` con `tauri-action`).
+
+## Arquitectura
+
+Clean Architecture con regla estricta de dependencias hacia adentro
+(`presentation → application → domain`; `infrastructure` implementa puertos del dominio).
+La raíz de composición (`src/App.tsx` + `src/main.tsx`) cablea todo.
+
+Persistencia (Linux):
+
+| Dato | Almacén |
 | --- | --- |
-| Study plan (interests, priorities, selection) | webview `localStorage` |
-| Theme | SQLite `cloudcerts.db → settings(theme)` (localStorage fallback in browser) |
-| Checkpoint progress | SQLite `cloudcerts.db → progress` (localStorage fallback in browser) |
+| Plan de estudios (intereses, prioridades, selección) | `localStorage` del webview |
+| Tema | SQLite `cloudcerts.db → settings(theme)` (fallback a localStorage en navegador) |
+| Progreso de checkpoints | SQLite `cloudcerts.db → progress` (fallback a localStorage en navegador) |
 
-DB file: `~/.local/share/com.cloudcertshub.app/cloudcerts.db`.
-Full layer map and the dependency-rule checks in [`ARCHITECTURE.md`](./ARCHITECTURE.md);
-product scope and requirement IDs in [`PRD.md`](./PRD.md).
+Archivo DB: `~/.local/share/com.cloudcertshub.app/cloudcerts.db`.
+Mapa de capas y reglas en [`ARCHITECTURE.md`](./ARCHITECTURE.md);
+alcance y requisitos en [`PRD.md`](./PRD.md).
 
-## Contributing & AI use
+## Ramas
 
-Contributions are welcome — start with [`CONTRIBUTING.md`](./CONTRIBUTING.md). This is an
-**AI-assisted project**: any AI-generated contribution must be disclosed and every exam
-fact must be verified against official sources before it lands — see
-[`AI_POLICY.md`](./AI_POLICY.md) (verify-before-invent). Be kind: [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md).
+GitFlow aplicado: **`dev`** (default, integración) y **`release`** (cortes de producción).
+Features como `type/slug` desde `dev`, PR a `dev`, release vía PR `dev` → `release`.
+Detalle en [`docs/process/branching.md`](./docs/process/branching.md).
 
-## License
+## Contribuir y uso de IA
 
-MIT (as declared by the project; a `LICENSE` file has yet to be added — see `CHANGELOG.md`).
+Contribuciones bienvenidas — empieza por [`CONTRIBUTING.md`](./CONTRIBUTING.md). Este es un
+**proyecto asistido por IA**: toda contribución generada por IA debe declararse y cada dato
+de examen debe verificarse contra fuentes oficiales antes de aterrizar — ver
+[`AI_POLICY.md`](./AI_POLICY.md) (verificar-antes-de-inventar). Amabilidad ante todo:
+[`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md). Estándares de ingeniería en [`AGENTS.md`](./AGENTS.md).
+
+## Licencia
+
+MIT — ver [`LICENSE`](./LICENSE).
