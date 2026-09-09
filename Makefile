@@ -70,7 +70,7 @@ prod-tauri-build: ## Build app in production mode (npm run build + tauri build)
 
 dev-tauri-run: ## Run app in development mode
 	@echo "$(BLUE)Running in development mode...$(NC)"
-	@npm run dev
+	@npx tauri dev
 
 # ==========================================
 # SETUP & CLEANUP
