@@ -1,0 +1,21 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+
+# Editor
+.idea
+.vscode/*
+!.vscode/extensions.json
+.vscode/settings.json
+
+# Tauri
+src-tauri/target
+src-tauri/gen/schemas
+
+# System
+.DS_Store
+
+*storybook.log
+storybook-static

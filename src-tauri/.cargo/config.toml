@@ -1,0 +1,8 @@
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))']
+runner = "cargo"
+
+[target.'cfg(target_os = "macos")']
+rustflags = ["-C", "link-arg=-framework", "-C", "link-arg=AppKit"]
+
+[target.'cfg(all(target_arch = "arm64", target_env = "msvc"))']
+rustflags = ["-C", "link-arg=-C", "-C", "link-arg=stack-size=16777216"]
