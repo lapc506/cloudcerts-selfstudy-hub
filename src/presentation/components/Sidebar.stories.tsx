@@ -30,7 +30,6 @@ const meta = {
     catalog,
     groupBy: "entity",
     onToggleInterest: noop,
-    onChangePriority: noop,
     onToggleGuide: noop,
     onNavigateWeek: noop,
   },

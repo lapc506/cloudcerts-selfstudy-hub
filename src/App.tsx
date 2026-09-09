@@ -175,7 +175,6 @@ export default function App() {
           groupBy={groupBy}
           width={sidebarWidth}
           onToggleInterest={handleToggleInterest}
-          onChangePriority={changePriority}
           onToggleGuide={handleToggleGuide}
           onNavigateWeek={navigateToWeek}
         />
@@ -196,6 +195,7 @@ export default function App() {
               catalog={catalog}
               done={progress.done}
               onOpenGuide={openGuide}
+              onChangePriority={changePriority}
             />
           )}
           <Suspense

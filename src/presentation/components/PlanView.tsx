@@ -11,16 +11,16 @@ import {
   Typography,
 } from "@mui/material";
 import { AutoAwesome, OpenInNew } from "@mui/icons-material";
-import type { Certification, UserState } from "../../domain";
+import type { Certification, Priority, UserState } from "../../domain";
 import {
   collectCertItemIds,
   countDone,
   formatValidity,
   parsePriority,
   popularityFlames,
-  priorityCaps,
 } from "../../domain";
 import { progressBar } from "../quarks";
+import PriorityRating from "../atoms/PriorityRating";
 
 // Organismo: vista Home — el plan de estudios (roadmap). Lista solo las
 // certificaciones del plan con su progreso y navegación a cada guía.
@@ -30,9 +30,10 @@ interface PlanViewProps {
   catalog: Certification[];
   done: Record<string, boolean>;
   onOpenGuide: (id: string) => void;
+  onChangePriority: (id: string, val: Priority) => void;
 }
 
-export default function PlanView({ state, catalog, done, onOpenGuide }: PlanViewProps) {
+export default function PlanView({ state, catalog, done, onOpenGuide, onChangePriority }: PlanViewProps) {
   const selected = catalog.filter((c) => state.selectedGuides.includes(c.id));
   const totalIds = selected.flatMap((c) => collectCertItemIds(c.id, c));
   const totalDone = countDone(totalIds, done);
@@ -85,11 +86,18 @@ export default function PlanView({ state, catalog, done, onOpenGuide }: PlanView
                       </Stack>
                       <Stack direction="row" spacing={1} useFlexGap sx={{ mt: 1, flexWrap: "wrap" }}>
                         <Chip size="small" label={cert.provider} />
-                        <Chip
-                          size="small"
-                          variant="outlined"
-                          label={`Prioridad ${priorityCaps(priority)} (${priority}/5)`}
-                        />
+                        <Stack direction="row" spacing={0.5} sx={{ alignItems: "center" }}>
+                          <Typography variant="caption" color="text.secondary">
+                            Prioridad
+                          </Typography>
+                          <PriorityRating
+                            value={priority}
+                            onChange={(v) => onChangePriority(cert.id, v)}
+                          />
+                          <Typography variant="caption" color="text.secondary">
+                            ({priority}/5)
+                          </Typography>
+                        </Stack>
                         <Chip
                           size="small"
                           variant="outlined"
