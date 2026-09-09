@@ -15,7 +15,8 @@ export default defineConfig(async () => ({
     port: 1420,
     strictPort: true,
     watch: {
-      ignored: ["**/src-tauri/**"]
+      // Watchers escasos en este equipo (ENOSPC): solo código fuente.
+      ignored: ["**/src-tauri/**", "**/landing/**", "**/dist/**", "**/docs/**", "**/openspec/**", "**/.git/**", "**/*.md", "**/test/**", "**/.storybook/**", "**/storybook-static/**", "**/coverage/**"]
     }
   },
   test: {
