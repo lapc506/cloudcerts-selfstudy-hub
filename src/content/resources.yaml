@@ -1,0 +1,51 @@
+# Directorio curado de recursos por proveedor (cheat sheets, labs, guías comunidad).
+# Solo URLs verificadas (https). La app lo renderiza en el panel de cada guía.
+# Para recursos por semana/certificación, ver docs/process/qa-traceability.md (futuro).
+version: 1
+providers:
+  AWS:
+    cheatsheets:
+      - label: "AWS Cheat Sheets — DigitalCloud"
+        url: "https://digitalcloud.training/aws-cheat-sheets/"
+      - label: "EC2 — Cloudoku"
+        url: "https://cloudoku.training/cheatsheets/AWS/EC2"
+      - label: "S3 — Cloudoku"
+        url: "https://cloudoku.training/cheatsheets/AWS/S3"
+      - label: "VPC — Cloudoku"
+        url: "https://cloudoku.training/cheatsheets/AWS/VPC"
+      - label: "IAM — Cloudoku"
+        url: "https://cloudoku.training/cheatsheets/AWS/IAM"
+    labs:
+      - label: "AWS Skill Builder"
+        url: "https://skillbuilder.aws/"
+    guides:
+      - label: "aws-cloud-practitioner-complete-guide — roxsross"
+        url: "https://github.com/roxsross/aws-cloud-practitioner-complete-guide"
+      - label: "aws-cheatsheet — invictus-ir"
+        url: "https://github.com/invictus-ir/aws-cheatsheet"
+      - label: "aws-cheat-sheet — temyers"
+        url: "https://github.com/temyers/aws-cheat-sheet"
+      - label: "aws-saa-c03-crash-course — NebulaTris"
+        url: "https://github.com/NebulaTris/aws-saa-c03-crash-course"
+      - label: "aws-saa-complete-cheatsheet — devesh-talreja"
+        url: "https://github.com/devesh-talreja/aws-saa-complete-cheatsheet"
+  Google Cloud:
+    cheatsheets:
+      - label: "Cheat Sheets (AWS/Azure/GCP) — Cloudoku"
+        url: "https://cloudoku.training/cheatsheets"
+    labs:
+      - label: "Google Cloud Skills Boost"
+        url: "https://www.cloudskillsboost.google/"
+    guides: []
+  Microsoft Azure:
+    cheatsheets:
+      - label: "Cheat Sheets (AWS/Azure/GCP) — Cloudoku"
+        url: "https://cloudoku.training/cheatsheets"
+    labs: []
+    guides: []
+  CNCF:
+    cheatsheets:
+      - label: "kubectl Quick Reference — kubernetes.io"
+        url: "https://kubernetes.io/docs/reference/kubectl/quick-reference/"
+    labs: []
+    guides: []

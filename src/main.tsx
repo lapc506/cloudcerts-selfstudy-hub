@@ -8,6 +8,7 @@ import "@fontsource/ibm-plex-mono/500.css";
 import "@fontsource/ibm-plex-mono/600.css";
 import "@fontsource/ibm-plex-mono/700.css";
 import App from "./App";
+import "./print.css";
 import AppThemeHost from "./presentation/AppThemeHost";
 import { settingsStore } from "./infrastructure/settingsStore";
 // Plugin E2E de WebdriverIO (inerte sin driver; requerido por @wdio/tauri-service).
