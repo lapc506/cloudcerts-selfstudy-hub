@@ -4842,6 +4842,1102 @@ weeks:
           - "Cerrar gaps en eval, seguridad y contexto."
           - "Checklist logístico del examen proctored."
 `,
+  "nv-pgenl": `
+id: "nv-pgenl"
+provider: "NVIDIA"
+provider_color: "#76B900"
+title: "NVIDIA-Certified Professional: Generative AI LLMs"
+code: "NCP-GENL"
+cost: "$200 USD"
+default_priority: 3
+popularity: 5
+summary: "Credencial Professional que valida diseñar, entrenar y optimizar LLMs con entrenamiento distribuido y fine-tuning sobre plataforma NVIDIA."
+meta:
+  exam_version: "Guía vigente (Professional)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-professional/"
+  format: "2 horas · multiple-choice · online con supervisión remota (Certiverse)"
+  passing_score: "No publicado (Pass/Fail)"
+  domains:
+    - "LLM Architecture and Training: 25%"
+    - "Distributed Training: 20%"
+    - "Fine-tuning and Customization: 20%"
+    - "RAG and Inference Optimization: 20%"
+    - "Evaluation and Trustworthy AI: 15%"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "LLM Engineer"
+    - "AI Solutions Architect"
+  versions: []
+  verified_sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-professional/"
+      date_last_fetched: "2026-09-09"
+      label: "Generative AI LLMs (NCP-GENL) — About, Exam Details"
+    - url: "https://www.nvidia.com/en-us/learn/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Get Certified by NVIDIA — catálogo, precios, FAQ y renovación"
+weeks:
+  - week: 1
+    title: "Arquitecturas LLM y ciclo de entrenamiento"
+    sections:
+      - domain: "LLM Architecture and Training"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Repasar transformers, tokenización y objetivos de preentrenamiento."
+          - "Comparar arquitecturas densas y mixture-of-experts para casos de uso."
+          - "Estudiar curvas de loss, overfitting y criterios de parada."
+          - "Montar un entrenamiento pequeño con NeMo Framework y registrar métricas."
+  - week: 2
+    title: "Entrenamiento distribuido a escala"
+    sections:
+      - domain: "Distributed Training"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Distinguir data, tensor y pipeline parallelism y cuándo combinarlos."
+          - "Configurar multi-GPU y multi-nodo con NCCL y chequeo de ancho de banda."
+          - "Aplicar mixed precision y gradient accumulation sin perder convergencia."
+          - "Diagnosticar cuellos de botella con Nsight Systems en un job distribuido."
+  - week: 3
+    title: "Fine-tuning y personalización de modelos"
+    sections:
+      - domain: "Fine-tuning and Customization"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Comparar full fine-tuning, LoRA/QLoRA y prompt tuning por costo y calidad."
+          - "Curar datasets de instrucción y alinear formato con la tarea objetivo."
+          - "Aplicar domain-adaptive pretraining para un dominio especializado."
+          - "Evaluar regresiones contra el modelo base antes de promover cambios."
+  - week: 4
+    title: "RAG y arquitecturas de recuperación"
+    sections:
+      - domain: "RAG and Inference Optimization"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diseñar pipelines RAG: chunking, embeddings y vector stores en GPU."
+          - "Medir recall y faithfulness con evals de recuperación y generación."
+          - "Implementar reranking y filtros para reducir alucinaciones."
+          - "Prototipar un asistente RAG con NIM y documentar decisiones."
+  - week: 5
+    title: "Optimización de inferencia para producción"
+    sections:
+      - domain: "RAG and Inference Optimization"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Acelerar inferencia con TensorRT-LLM: cuantización y batching."
+          - "Dimensionar throughput y latencia p50/p99 para un SLO dado."
+          - "Servir modelos con Triton Inference Server y versionado."
+          - "Perfilar memoria KV-cache y fijar límites por réplica."
+  - week: 6
+    title: "Evaluación sistemática de LLMs"
+    sections:
+      - domain: "Evaluation and Trustworthy AI"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Diseñar evals con golden sets, jueces LLM y revisión humana."
+          - "Medir toxicidad, sesgo y fugas de datos en salidas del modelo."
+          - "Comparar checkpoints con tests de regresión antes del release."
+          - "Documentar limitaciones conocidas del modelo evaluado."
+  - week: 7
+    title: "IA confiable y gobierno de modelos"
+    sections:
+      - domain: "Evaluation and Trustworthy AI"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Aplicar principios de transparencia y consentimiento en datos."
+          - "Implementar guardrails de contenido y moderación en producción."
+          - "Trazar linaje de datos y versiones para auditoría."
+          - "Redactar model card con riesgos y usos previstos."
+  - week: 8
+    title: "Simulacro final NCP-GENL"
+    sections:
+      - domain: "LLM Architecture and Training"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 65 preguntas y repaso de fallos."
+          - "Cerrar gaps en entrenamiento distribuido y fine-tuning."
+          - "Repasar comandos y flujos NIM, NeMo y Triton."
+          - "Checklist logístico del examen proctored."
+`,
+  "nv-pagentic": `
+id: "nv-pagentic"
+provider: "NVIDIA"
+provider_color: "#76B900"
+title: "NVIDIA-Certified Professional: Agentic AI"
+code: "NCP-AAI"
+cost: "$200 USD"
+default_priority: 3
+popularity: 5
+summary: "Credencial Professional que valida construir agentes RAG y aplicaciones agénticas con LLMs, evaluación y despliegue a escala."
+meta:
+  exam_version: "Guía vigente (Professional)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.nvidia.com/en-us/learn/certification/agentic-ai-professional/"
+  format: "2 horas · multiple-choice · online con supervisión remota (Certiverse)"
+  passing_score: "No publicado (Pass/Fail)"
+  domains:
+    - "Agent Design and Tool Use: 25%"
+    - "RAG Pipelines for Agents: 25%"
+    - "Evaluation and Observability: 20%"
+    - "Multi-agent Orchestration: 15%"
+    - "Production Deployment: 15%"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "AI Agent Developer"
+    - "Applied AI Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/agentic-ai-professional/"
+      date_last_fetched: "2026-09-09"
+      label: "Agentic AI (NCP-AAI) — About, Exam Details"
+    - url: "https://www.nvidia.com/en-us/learn/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Get Certified by NVIDIA — catálogo, precios, FAQ y renovación"
+weeks:
+  - week: 1
+    title: "Fundamentos de agentes y uso de herramientas"
+    sections:
+      - domain: "Agent Design and Tool Use"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Distinguir agentes reactivos, planificadores y loops ReAct."
+          - "Definir herramientas con esquemas y validación de argumentos."
+          - "Implementar un agente que consulte APIs y maneje errores."
+          - "Limitar iteraciones y costo por tarea con presupuestos."
+  - week: 2
+    title: "RAG como memoria del agente"
+    sections:
+      - domain: "RAG Pipelines for Agents"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Conectar recuperación a decisiones del agente en cada paso."
+          - "Sincronizar índices con fuentes cambiantes y versionar snapshots."
+          - "Dar al agente búsqueda semántica y SQL según el caso."
+          - "Medir grounding de respuestas con evals dedicados."
+  - week: 3
+    title: "Evaluación de RAG y búsqueda semántica"
+    sections:
+      - domain: "Evaluation and Observability"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Evaluar retrievers con recall@k y nDCG sobre queries etiquetadas."
+          - "Detectar deriva de calidad entre reindexados."
+          - "Trazar cada llamada a herramienta con inputs y latencias."
+          - "Crear dashboards de éxito de tarea y costo por ejecución."
+  - week: 4
+    title: "Orquestación multi-agente observable"
+    sections:
+      - domain: "Multi-agent Orchestration"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Dividir tareas entre planificador, ejecutor y verificador."
+          - "Pasar contexto entre agentes sin perder estado."
+          - "Resolver conflictos y deadlocks en flujos colaborativos."
+          - "Registrar trazas extremo a extremo para debugging."
+  - week: 5
+    title: "Nuevo conocimiento y adaptación continua"
+    sections:
+      - domain: "RAG Pipelines for Agents"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Incorporar documentos nuevos sin reentrenar el modelo base."
+          - "Combinar fine-tuning ligero con recuperación para jerga de dominio."
+          - "Evaluar olvido catastrófico tras cada actualización."
+          - "Automatizar reindexado con tests de humo."
+  - week: 6
+    title: "Despliegue de agentes en producción"
+    sections:
+      - domain: "Production Deployment"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Empaquetar agentes con NIM y exponer endpoints estables."
+          - "Escalar workers por cola de tareas con límites de concurrencia."
+          - "Aislar secretos y permisos por herramienta del agente."
+          - "Definir rollbacks cuando cae la tasa de éxito."
+  - week: 7
+    title: "Seguridad y casos borde de agentes"
+    sections:
+      - domain: "Production Deployment"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Prevenir prompt injection en entradas y documentos recuperados."
+          - "Poner aprobación humana en acciones irreversibles."
+          - "Auditar llamadas externas del agente para compliance."
+          - "Probar jailbreaks comunes y documentar mitigaciones."
+  - week: 8
+    title: "Simulacro final NCP-AAI"
+    sections:
+      - domain: "Agent Design and Tool Use"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 65 preguntas y repaso de fallos."
+          - "Cerrar gaps en evaluación y orquestación multi-agente."
+          - "Repasar flujos RAG, NIM y observabilidad."
+          - "Checklist logístico del examen proctored."
+`,
+  "nv-pds": `
+id: "nv-pds"
+provider: "NVIDIA"
+provider_color: "#76B900"
+title: "NVIDIA-Certified Professional: Accelerated Data Science"
+code: "NCP-ADS"
+cost: "$200 USD"
+default_priority: 3
+popularity: 4
+summary: "Credencial Professional que valida flujos de data science acelerados por GPU: RAPIDS, feature engineering y despliegue de modelos."
+meta:
+  exam_version: "Guía vigente (Professional)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.nvidia.com/en-us/learn/certification/accelerated-data-science-professional/"
+  format: "2 horas · multiple-choice · online con supervisión remota (Certiverse)"
+  passing_score: "No publicado (Pass/Fail)"
+  domains:
+    - "GPU Data Processing: 25%"
+    - "Feature Engineering: 20%"
+    - "Model Training at Scale: 25%"
+    - "Deployment and MLOps: 15%"
+    - "Visualization and Communication: 15%"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "Data Scientist"
+    - "ML Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/accelerated-data-science-professional/"
+      date_last_fetched: "2026-09-09"
+      label: "Accelerated Data Science (NCP-ADS) — About, Exam Details"
+    - url: "https://www.nvidia.com/en-us/learn/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Get Certified by NVIDIA — catálogo, precios, FAQ y renovación"
+weeks:
+  - week: 1
+    title: "Procesamiento GPU con RAPIDS y cuDF"
+    sections:
+      - domain: "GPU Data Processing"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Migrar pipelines pandas a cuDF midiendo speedup y memoria."
+          - "Unir y agregar datasets grandes sin salir de la GPU."
+          - "Acelerar ETL con cuIO y particionado eficiente."
+          - "Perfilar transferencias host-device y eliminar copias."
+  - week: 2
+    title: "Feature engineering acelerado"
+    sections:
+      - domain: "Feature Engineering"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Crear features tabulares con NVTabular en pipelines reproducibles."
+          - "Codificar categóricas y temporales para modelos GPU."
+          - "Seleccionar features por importancia y estabilidad."
+          - "Versionar datasets y features para experimentos comparables."
+  - week: 3
+    title: "Entrenamiento distribuido de modelos"
+    sections:
+      - domain: "Model Training at Scale"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Entrenar XGBoost y LightGBM en GPU con validación cruzada."
+          - "Escalar a multi-GPU con Dask-cuDF y Dask-ML."
+          - "Ajustar hiperparámetros con búsqueda distribuida."
+          - "Comparar precisión vs. tiempo para elegir el modelo final."
+  - week: 4
+    title: "Series temporales y grafos en GPU"
+    sections:
+      - domain: "Model Training at Scale"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Pronosticar series temporales con modelos acelerados."
+          - "Acelerar clustering y grafos con cuML y cuGraph."
+          - "Validar con splits temporales sin fuga de información."
+          - "Documentar supuestos del modelo para el negocio."
+  - week: 5
+    title: "Despliegue y MLOps de modelos"
+    sections:
+      - domain: "Deployment and MLOps"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Servir modelos con Triton y monitorear latencia."
+          - "Detectar deriva de datos y programar reentrenos."
+          - "Empaquetar entornos reproducibles con contenedores."
+          - "Definir rollback ante caída de métricas en producción."
+  - week: 6
+    title: "Workflows de punta a punta"
+    sections:
+      - domain: "Deployment and MLOps"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Orquestar ingesta, entrenamiento y despliegue en un pipeline."
+          - "Acelerar Spark con RAPIDS Accelerator sin reescribir jobs."
+          - "Optimizar portafolios y casos financieros como ejercicio aplicado."
+          - "Medir costo por experimento y priorizar backlog."
+  - week: 7
+    title: "Visualización y comunicación de resultados"
+    sections:
+      - domain: "Visualization and Communication"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Explorar datos masivos con visualización interactiva acelerada."
+          - "Contar la historia del modelo para audiencia no técnica."
+          - "Elegir gráficos que no distorsionen las conclusiones."
+          - "Armar un reporte reproducible del caso de estudio."
+  - week: 8
+    title: "Simulacro final NCP-ADS"
+    sections:
+      - domain: "GPU Data Processing"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 65 preguntas y repaso de fallos."
+          - "Cerrar gaps en RAPIDS y entrenamiento distribuido."
+          - "Repasar cuDF, cuML y Triton a nivel conceptual."
+          - "Checklist logístico del examen proctored."
+`,
+  "nv-popenusd": `
+id: "nv-popenusd"
+provider: "NVIDIA"
+provider_color: "#76B900"
+title: "NVIDIA-Certified Professional: OpenUSD Development"
+code: "NCP-OUSD"
+cost: "$200 USD"
+default_priority: 2
+popularity: 3
+summary: "Credencial Professional que valida construir y optimizar pipelines de contenido 3D con OpenUSD para gemelos digitales y simulación."
+meta:
+  exam_version: "Guía vigente (Professional)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.nvidia.com/en-us/learn/certification/openusd-development-professional/"
+  format: "2 horas · multiple-choice · online con supervisión remota (Certiverse)"
+  passing_score: "No publicado (Pass/Fail)"
+  domains:
+    - "USD Composition and Layers: 25%"
+    - "Assets and Materials: 20%"
+    - "Data Exchange Pipelines: 20%"
+    - "Omniverse Kit Development: 20%"
+    - "Simulation and Digital Twins: 15%"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "OpenUSD Developer"
+    - "Digital Twin Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/openusd-development-professional/"
+      date_last_fetched: "2026-09-09"
+      label: "OpenUSD Development (NCP-OUSD) — About, Exam Details"
+    - url: "https://www.nvidia.com/en-us/learn/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Get Certified by NVIDIA — catálogo, precios, FAQ y renovación"
+weeks:
+  - week: 1
+    title: "Fundamentos USD y composición"
+    sections:
+      - domain: "USD Composition and Layers"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Explicar prims, propiedades y el modelo de composición por capas."
+          - "Crear arcos de composición básicos con usdview para verificar."
+          - "Ordenar opiniones con layer stacking y sublayers."
+          - "Resolver referencias y payloads en escenas de ejemplo."
+  - week: 2
+    title: "Estructura de assets y agregación"
+    sections:
+      - domain: "Assets and Materials"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Organizar assets con principios de modularidad e instanciado."
+          - "Agregar contenido de múltiples fuentes en un asset coherente."
+          - "Preparar assets 3D para simulación y physical AI."
+          - "Documentar convenciones de nombres y versiones de assets."
+  - week: 3
+    title: "Materiales, luces y escenarios"
+    sections:
+      - domain: "Assets and Materials"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Asignar materiales y variantes a prims con MaterialX."
+          - "Montar un stage con blueprints de descripción de escena."
+          - "Ajustar iluminación para previsualización consistente."
+          - "Validar escenas contra checklists de calidad de assets."
+  - week: 4
+    title: "Pipelines de intercambio de datos"
+    sections:
+      - domain: "Data Exchange Pipelines"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diseñar pipelines USD entre DCCs con conversores."
+          - "Automatizar validación y reparación de stages."
+          - "Sincronizar cambios con control de versiones."
+          - "Medir tiempos de carga y optimizar payloads."
+  - week: 5
+    title: "Extensiones Omniverse con Python"
+    sections:
+      - domain: "Omniverse Kit Development"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Crear una extensión Omniverse básica en Python."
+          - "Extender apps Kit para dashboards de gemelos digitales."
+          - "Personalizar UI y paneles front-end de la extensión."
+          - "Empaquetar y distribuir la extensión al equipo."
+  - week: 6
+    title: "Streaming y despliegue de apps Kit"
+    sections:
+      - domain: "Omniverse Kit Development"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Desplegar apps de gemelos digitales con Kit App Streaming."
+          - "Configurar autenticación y sesiones concurrentes."
+          - "Optimizar escenas pesadas para streaming fluido."
+          - "Monitorear uso y errores de la app desplegada."
+  - week: 7
+    title: "Simulación y gemelos digitales"
+    sections:
+      - domain: "Simulation and Digital Twins"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Ensamblar un gemelo digital mínimo con Omniverse y USD."
+          - "Conectar datos sintéticos y sensores simulados."
+          - "Validar física básica con Isaac Sim a nivel conceptual."
+          - "Presentar el gemelo con métricas de negocio."
+  - week: 8
+    title: "Simulacro final NCP-OUSD"
+    sections:
+      - domain: "USD Composition and Layers"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 65 preguntas y repaso de fallos."
+          - "Cerrar gaps en composición y pipelines de datos."
+          - "Repasar Kit, layers y agregación de assets."
+          - "Checklist logístico del examen proctored."
+`,
+  "nv-pinfra": `
+id: "nv-pinfra"
+provider: "NVIDIA"
+provider_color: "#76B900"
+title: "NVIDIA-Certified Professional: AI Infrastructure"
+code: "NCP-AII"
+cost: "$400 USD"
+default_priority: 3
+popularity: 4
+summary: "Credencial Professional que valida desplegar, configurar y validar infraestructura NVIDIA avanzada: DGX, Kubernetes y fabric."
+meta:
+  exam_version: "Guía vigente (Professional)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-professional/"
+  format: "2 horas · multiple-choice · online con supervisión remota (Certiverse)"
+  passing_score: "No publicado (Pass/Fail)"
+  domains:
+    - "GPU Systems and DGX: 25%"
+    - "Kubernetes and Scheduling: 25%"
+    - "Storage and Networking Fabric: 20%"
+    - "Deployment Validation: 15%"
+    - "NVIDIA AI Enterprise: 15%"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "AI Infrastructure Engineer"
+    - "MLOps Platform Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-professional/"
+      date_last_fetched: "2026-09-09"
+      label: "AI Infrastructure (NCP-AII) — About, Exam Details"
+    - url: "https://www.nvidia.com/en-us/learn/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Get Certified by NVIDIA — catálogo, precios, FAQ y renovación"
+weeks:
+  - week: 1
+    title: "Sistemas DGX y arquitectura GPU"
+    sections:
+      - domain: "GPU Systems and DGX"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Describir DGX, HGX y NVLink/NVSwitch a nivel de despliegue."
+          - "Verificar GPUs con nvidia-smi y compatibilidad driver/CUDA."
+          - "Planear capacidad por workload de entrenamiento e inferencia."
+          - "Documentar inventario y topología del clúster."
+  - week: 2
+    title: "Kubernetes para cargas IA"
+    sections:
+      - domain: "Kubernetes and Scheduling"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Desplegar NVIDIA AI Enterprise sobre Kubernetes bare-metal."
+          - "Configurar GPU Operator y device plugins."
+          - "Planificar colas y prioridades con Run:ai o Kueue."
+          - "Aislar tenants con cuotas y políticas de red."
+  - week: 3
+    title: "Almacenamiento y fabric de red"
+    sections:
+      - domain: "Storage and Networking Fabric"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Dimensionar almacenamiento para checkpoints y datasets."
+          - "Validar InfiniBand y Ethernet con herramientas de cableado."
+          - "Configurar UFM para gestión del fabric."
+          - "Medir ancho de banda efectivo con NCCL tests."
+  - week: 4
+    title: "Aprovisionamiento con BCM y Mission Control"
+    sections:
+      - domain: "Deployment Validation"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Aprovisionar nodos con Base Command Manager."
+          - "Registrar clústeres en Mission Control y asignar políticas."
+          - "Automatizar golden images y configuración inicial."
+          - "Probar recuperación ante fallo de nodo."
+  - week: 5
+    title: "Validación de despliegues end-to-end"
+    sections:
+      - domain: "Deployment Validation"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Correr jobs de validación sintéticos post-instalación."
+          - "Verificar NCCL, almacenamiento y scheduling juntos."
+          - "Firmar checklist de aceptación del clúster."
+          - "Documentar desvíos y remediaciones aplicadas."
+  - week: 6
+    title: "NVIDIA AI Enterprise en producción"
+    sections:
+      - domain: "NVIDIA AI Enterprise"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Licenciar y actualizar la suite AI Enterprise."
+          - "Exponer NIM y modelos como servicios internos."
+          - "Integrar observabilidad base del stack."
+          - "Planear ventanas de mantenimiento sin downtime."
+  - week: 7
+    title: "Seguridad y casos borde de plataforma"
+    sections:
+      - domain: "NVIDIA AI Enterprise"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Endurecer accesos SSH y API del plano de control."
+          - "Rotar credenciales y certificados del clúster."
+          - "Auditar imágenes y SBOM de workloads."
+          - "Probar restore de backups de configuración."
+  - week: 8
+    title: "Simulacro final NCP-AII"
+    sections:
+      - domain: "GPU Systems and DGX"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 65 preguntas y repaso de fallos."
+          - "Cerrar gaps en fabric y validación de despliegues."
+          - "Repasar DGX, Kubernetes y AI Enterprise."
+          - "Checklist logístico del examen proctored."
+`,
+  "nv-pops": `
+id: "nv-pops"
+provider: "NVIDIA"
+provider_color: "#76B900"
+title: "NVIDIA-Certified Professional: AI Operations"
+code: "NCP-AIO"
+cost: "$500 USD"
+default_priority: 3
+popularity: 3
+summary: "Credencial Professional que valida monitorear, diagnosticar y optimizar infraestructura IA NVIDIA en operación continua."
+meta:
+  exam_version: "Guía vigente (Professional)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.nvidia.com/en-us/learn/certification/ai-operations-professional/"
+  format: "2 horas · multiple-choice · online con supervisión remota (Certiverse)"
+  passing_score: "No publicado (Pass/Fail)"
+  domains:
+    - "Monitoring and Telemetry: 25%"
+    - "Troubleshooting: 25%"
+    - "Performance Optimization: 20%"
+    - "Lifecycle and Upgrades: 15%"
+    - "Capacity and Cost Management: 15%"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "AI Operations Engineer"
+    - "SRE GPU Platforms"
+  versions: []
+  verified_sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/ai-operations-professional/"
+      date_last_fetched: "2026-09-09"
+      label: "AI Operations (NCP-AIO) — About, Exam Details"
+    - url: "https://www.nvidia.com/en-us/learn/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Get Certified by NVIDIA — catálogo, precios, FAQ y renovación"
+weeks:
+  - week: 1
+    title: "Telemetría GPU con DCGM"
+    sections:
+      - domain: "Monitoring and Telemetry"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Exponer métricas GPU con DCGM Exporter hacia Prometheus."
+          - "Alertar sobre temperatura, throttling y errores Xid."
+          - "Crear dashboards de utilización por job y tenant."
+          - "Retener series para análisis post-incidente."
+  - week: 2
+    title: "Observabilidad del fabric y red"
+    sections:
+      - domain: "Monitoring and Telemetry"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Monitorear InfiniBand con UFM Telemetry."
+          - "Detectar congestión y errores de enlace a tiempo."
+          - "Correlacionar red lenta con jobs afectados."
+          - "Definir SLIs de fabric para el equipo de plataforma."
+  - week: 3
+    title: "Diagnóstico de fallos GPU y jobs"
+    sections:
+      - domain: "Troubleshooting"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Clasificar fallos: hardware, driver, red o aplicación."
+          - "Aislar nodos malos con health checks automatizados."
+          - "Reproducir NCCL timeouts en entorno controlado."
+          - "Escribir postmortems con acciones concretas."
+  - week: 4
+    title: "Incidentes de scheduling y colas"
+    sections:
+      - domain: "Troubleshooting"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Diagnosticar starvation y preemption en colas."
+          - "Rastrear por qué un job no obtiene GPUs."
+          - "Ajustar prioridades sin romper fairness."
+          - "Simular un game-day de caída de scheduler."
+  - week: 5
+    title: "Optimización de rendimiento sostenido"
+    sections:
+      - domain: "Performance Optimization"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Subir utilización sostenida sin afectar latencias."
+          - "Afinar afinidad NUMA y locality de datos."
+          - "Reducir fragmentación de reservas GPU."
+          - "Comparar antes/después con benchmarks estándar."
+  - week: 6
+    title: "Ciclo de vida y upgrades sin downtime"
+    sections:
+      - domain: "Lifecycle and Upgrades"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Planear upgrades de driver/CUDA por oleadas con canary."
+          - "Drenar nodos y reprogramar jobs automáticamente."
+          - "Validar compatibilidad de versiones antes del rollout."
+          - "Revertir una oleada fallida con runbooks."
+  - week: 7
+    title: "Capacidad y costos de la flota GPU"
+    sections:
+      - domain: "Capacity and Cost Management"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Pronosticar demanda por equipo y temporada."
+          - "Medir costo por GPU-hora y por experimento."
+          - "Apagar capacidad ociosa con políticas automáticas."
+          - "Presentar el business case de expansión."
+  - week: 8
+    title: "Simulacro final NCP-AIO"
+    sections:
+      - domain: "Monitoring and Telemetry"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 65 preguntas y repaso de fallos."
+          - "Cerrar gaps en troubleshooting y upgrades."
+          - "Repasar DCGM, UFM y runbooks de incidentes."
+          - "Checklist logístico del examen proctored."
+`,
+  "nv-pnet": `
+id: "nv-pnet"
+provider: "NVIDIA"
+provider_color: "#76B900"
+title: "NVIDIA-Certified Professional: AI Networking"
+code: "NCP-AIN"
+cost: "$400 USD"
+default_priority: 3
+popularity: 3
+summary: "Credencial Professional que valida desplegar redes InfiniBand y Ethernet Spectrum-X para fábricas de IA."
+meta:
+  exam_version: "Guía vigente (Professional)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.nvidia.com/en-us/learn/certification/ai-networking-professional/"
+  format: "2 horas · multiple-choice · online con supervisión remota (Certiverse)"
+  passing_score: "No publicado (Pass/Fail)"
+  domains:
+    - "InfiniBand Fabric: 25%"
+    - "Ethernet and Spectrum-X: 20%"
+    - "RDMA and Transports: 20%"
+    - "Monitoring with UFM: 20%"
+    - "DPU and DOCA: 15%"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "AI Network Engineer"
+    - "HPC Network Administrator"
+  versions: []
+  verified_sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/ai-networking-professional/"
+      date_last_fetched: "2026-09-09"
+      label: "AI Networking (NCP-AIN) — About, Exam Details"
+    - url: "https://www.nvidia.com/en-us/learn/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Get Certified by NVIDIA — catálogo, precios, FAQ y renovación"
+weeks:
+  - week: 1
+    title: "Fundamentos de redes para IA"
+    sections:
+      - domain: "InfiniBand Fabric"
+        weight: "25%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Comparar InfiniBand y Ethernet para entrenamientos distribuidos."
+          - "Describir topologías fat-tree y Dragonfly a alto nivel."
+          - "Identificar componentes: HCAs, switches y cables."
+          - "Leer un diagrama de fabric y detectar single points of failure."
+  - week: 2
+    title: "Administración InfiniBand"
+    sections:
+      - domain: "InfiniBand Fabric"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Levantar y verificar enlaces con ibstat e ibdiagnet."
+          - "Configurar particiones y claves de red."
+          - "Actualizar firmware de switches y adaptadores."
+          - "Documentar el mapa físico-lógico del fabric."
+  - week: 3
+    title: "Ethernet Spectrum-X y Cumulus"
+    sections:
+      - domain: "Ethernet and Spectrum-X"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Desplegar Cumulus Linux en switches Spectrum."
+          - "Configurar RoCE para tráfico RDMA sobre Ethernet."
+          - "Ajustar buffers y control de congestión."
+          - "Validar throughput con benchmarks de red."
+  - week: 4
+    title: "RDMA de punta a punta"
+    sections:
+      - domain: "RDMA and Transports"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Explicar queue pairs, memoria registrada y zero-copy."
+          - "Programar RDMA básico y medir latencia."
+          - "Depurar conexiones con herramientas MLXlink."
+          - "Elegir transporte según workload y escala."
+  - week: 5
+    title: "Monitoreo con UFM y NetQ"
+    sections:
+      - domain: "Monitoring with UFM"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Desplegar UFM y descubrir la topología automáticamente."
+          - "Alertar sobre errores de símbolo y caídas de enlace."
+          - "Validar cables con la herramienta CVT."
+          - "Generar reportes de salud para operaciones."
+  - week: 6
+    title: "DPU BlueField y DOCA"
+    sections:
+      - domain: "DPU and DOCA"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Describir offloads de red, seguridad y storage en DPU."
+          - "Aprovisionar BlueField con DOCA a nivel conceptual."
+          - "Aislar tráfico de control, datos y gestión."
+          - "Evaluar cuándo justifica DPU frente a SmartNIC básica."
+  - week: 7
+    title: "Diseño de fabric para AI factory"
+    sections:
+      - domain: "Monitoring with UFM"
+        weight: "20%"
+        bloom: 4
+        kirkpatrick: "L2"
+        points:
+          - "Dimensionar front-end y back-end networks por escala."
+          - "Planear crecimiento por pods sin rediseñar el core."
+          - "Estimar presupuesto de red por nodo GPU."
+          - "Presentar el diseño con riesgos y mitigaciones."
+  - week: 8
+    title: "Simulacro final NCP-AIN"
+    sections:
+      - domain: "InfiniBand Fabric"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 65 preguntas y repaso de fallos."
+          - "Cerrar gaps en Spectrum-X y monitoreo UFM."
+          - "Repasar RDMA, DPU y topologías."
+          - "Checklist logístico del examen proctored."
+`,
+  "nv-prack": `
+id: "nv-prack"
+provider: "NVIDIA"
+provider_color: "#76B900"
+title: "NVIDIA-Certified Professional: AI Rack and Interconnect"
+code: "NCP-ARI"
+cost: "$400 USD"
+default_priority: 2
+popularity: 3
+summary: "Credencial Professional nueva que valida desplegar racks DGX/HGX: energía, refrigeración, cableado e interconexión."
+meta:
+  exam_version: "Guía vigente (Professional)"
+  guide_date: "2026-09-09"
+  guide_source: "https://www.nvidia.com/en-us/learn/certification/ai-rack-and-interconnect-professional/"
+  format: "2 horas · multiple-choice · online con supervisión remota (Certiverse)"
+  passing_score: "No publicado (Pass/Fail)"
+  domains:
+    - "Rack Architecture: 25%"
+    - "Power and Cooling: 20%"
+    - "Cabling and Validation: 25%"
+    - "Interconnect Bring-up: 15%"
+    - "Operations Handoff: 15%"
+  validity_years: 2
+  recert_window: "Antes de la fecha de expiración"
+  recert_options:
+    - "Repetir el examen"
+  recert_discount: "Sin descuento documentado"
+  level: "300 · Professional"
+  career_paths:
+    - "Data Center Deployment Engineer"
+    - "AI Infrastructure Engineer"
+  versions: []
+  verified_sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/ai-rack-and-interconnect-professional/"
+      date_last_fetched: "2026-09-09"
+      label: "AI Rack and Interconnect (NCP-ARI) — About, Exam Details"
+    - url: "https://www.nvidia.com/en-us/learn/certification/"
+      date_last_fetched: "2026-09-09"
+      label: "Get Certified by NVIDIA — catálogo, precios, FAQ y renovación"
+weeks:
+  - week: 1
+    title: "Arquitecturas de rack HGX y DGX"
+    sections:
+      - domain: "Rack Architecture"
+        weight: "25%"
+        bloom: 2
+        kirkpatrick: "L2"
+        points:
+          - "Describir racks HGX de 8 GPUs y su interconnect interno."
+          - "Leer planos de rack: PDUs, switches y bandejas."
+          - "Distinguir aire vs. líquido según densidad."
+          - "Verificar lista de materiales contra el diseño."
+  - week: 2
+    title: "Energía y refrigeración"
+    sections:
+      - domain: "Power and Cooling"
+        weight: "20%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Calcular carga eléctrica por rack y redundancia N+1."
+          - "Planear circuitos y PDUs con margen de crecimiento."
+          - "Coordinar refrigeración con el equipo de facilities."
+          - "Medir PUE antes y después del despliegue."
+  - week: 3
+    title: "Cableado estructurado y CVT"
+    sections:
+      - domain: "Cabling and Validation"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Tender fibra y cobre con radios de curvatura correctos."
+          - "Etiquetar cada enlace según el plano aprobado."
+          - "Validar cables con la herramienta CVT."
+          - "Reemplazar enlaces marginales antes del bring-up."
+  - week: 4
+    title: "Bring-up de interconexión"
+    sections:
+      - domain: "Interconnect Bring-up"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Levantar enlaces NVLink y red en secuencia definida."
+          - "Verificar todos los enlaces con diagnósticos del vendor."
+          - "Resolver enlaces caídos con metodología de descarte."
+          - "Firmar la matriz de conectividad del rack."
+  - week: 5
+    title: "Integración con el fabric del site"
+    sections:
+      - domain: "Interconnect Bring-up"
+        weight: "15%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Conectar uplinks del rack al core del data center."
+          - "Configurar VLANs y direccionamiento acordados."
+          - "Probar redundancia cortando un uplink."
+          - "Documentar la integración para operaciones."
+  - week: 6
+    title: "Pruebas de aceptación del rack"
+    sections:
+      - domain: "Cabling and Validation"
+        weight: "25%"
+        bloom: 4
+        kirkpatrick: "L3"
+        points:
+          - "Correr burn-in de GPUs y detectar outliers."
+          - "Validar NCCL a través del rack completo."
+          - "Medir ruido térmico bajo carga sostenida."
+          - "Firmar criterios de aceptación con el cliente."
+  - week: 7
+    title: "Handoff a operaciones"
+    sections:
+      - domain: "Operations Handoff"
+        weight: "15%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Entregar as-builts, credenciales y runbooks."
+          - "Capacitar al turno en procedimientos del rack."
+          - "Definir SLAs y rutas de escalamiento."
+          - "Agendar primera revisión post-despliegue."
+  - week: 8
+    title: "Simulacro final NCP-ARI"
+    sections:
+      - domain: "Rack Architecture"
+        weight: "25%"
+        bloom: 3
+        kirkpatrick: "L2"
+        points:
+          - "Simulacro cronometrado de 65 preguntas y repaso de fallos."
+          - "Cerrar gaps en energía y validación de cableado."
+          - "Repasar bring-up y handoff operativo."
+          - "Checklist logístico del examen proctored."
+`,
 };
 
 function fromYaml<T>(raw: string): T | null {
