@@ -154,6 +154,7 @@ export default function App() {
         zoom: APP_ZOOM,
       }}
     >
+      <Box className="print-hide" sx={{ display: "contents" }}>
       <Ribbon
         view={view}
         onViewChange={setView}
@@ -167,8 +168,10 @@ export default function App() {
         onSavePlan={handleSavePlan}
         canCopy={state.selectedGuides.length > 0}
       />
+      </Box>
 
       <Box sx={{ flex: 1, display: "flex", overflow: "hidden" }}>
+        <Box className="print-hide" sx={{ display: "contents" }}>
         <Sidebar
           state={state}
           catalog={catalog}
@@ -179,7 +182,10 @@ export default function App() {
           onToggleGuide={handleToggleGuide}
           onNavigateWeek={navigateToWeek}
         />
+        </Box>
+        <Box className="print-hide" sx={{ display: "contents" }}>
         <SidebarResizer width={sidebarWidth} onResize={handleSidebarResize} />
+        </Box>
 
         <Box
           component="main"
@@ -244,6 +250,7 @@ export default function App() {
       <ThemePicker open={themePickerOpen} onClose={() => setThemePickerOpen(false)} />
 
       <Box
+        className="print-hide"
         sx={{
           position: "fixed",
           bottom: 24,

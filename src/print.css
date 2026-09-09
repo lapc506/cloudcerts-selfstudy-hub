@@ -1,0 +1,14 @@
+/* Impresión de chuletas: oculta el chrome de la app, evita cortes feos. */
+@media print {
+  .print-hide {
+    display: none !important;
+  }
+
+  .cheatsheet-print {
+    break-inside: avoid-page;
+  }
+
+  .MuiAccordion-root {
+    break-inside: avoid;
+  }
+}

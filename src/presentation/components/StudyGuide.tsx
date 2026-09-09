@@ -34,8 +34,17 @@ import {
   AlarmOn,
   Category,
   Percent,
+  MenuBook,
+  Science,
+  Forum,
 } from "@mui/icons-material";
 import type { Certification, UserState, Week, WeekSection } from "../../domain";
+import {
+  collectDomainFocus,
+  compileCheatsheet,
+  firstIncompleteWeek,
+} from "../../domain/studyFocus";
+import { resourcesFor } from "../../infrastructure/resourcesRepository";
 import {
   buildFormResponse,
   BLOOM_LABELS,
@@ -238,6 +247,12 @@ function WeekAccordion({
 function CertificationMetaPanel({ cert }: { cert: Certification }) {
   const meta = cert.meta;
   if (!meta) return null;
+  const res = resourcesFor(cert.provider);
+  const resourceGroups = [
+    { title: "Hojas de referencia", icon: <MenuBook sx={{ fontSize: 16 }} />, links: res.cheatsheets },
+    { title: "Laboratorios", icon: <Science sx={{ fontSize: 16 }} />, links: res.labs },
+    { title: "Guías de la comunidad", icon: <Forum sx={{ fontSize: 16 }} />, links: res.guides },
+  ].filter((g) => g.links.length > 0);
 
   return (
     <Paper variant="outlined" sx={{ p: 2.5, mb: 3, borderColor: "divider" }}>
@@ -382,9 +397,134 @@ function CertificationMetaPanel({ cert }: { cert: Certification }) {
               </Stack>
             </Box>
           )}
+          {resourceGroups.length > 0 && (
+            <Box sx={{ mt: 1.5 }}>
+              <Typography variant="subtitle2" gutterBottom>
+                Recursos
+              </Typography>
+              {resourceGroups.map((g) => (
+                <Box key={g.title} sx={{ mt: 1 }}>
+                  <Stack direction="row" spacing={1} sx={{ mb: 0.5, alignItems: "center" }}>
+                    {g.icon}
+                    <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                      {g.title}
+                    </Typography>
+                  </Stack>
+                  <Stack spacing={0.5}>
+                    {g.links.map((l) => (
+                      <Link
+                        key={l.url}
+                        href={l.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        underline="hover"
+                        variant="body2"
+                        sx={{ display: "inline-flex", alignItems: "center", gap: 0.5 }}
+                      >
+                        {l.label} <OpenInNew sx={{ fontSize: 14 }} />
+                      </Link>
+                    ))}
+                  </Stack>
+                </Box>
+              ))}
+            </Box>
+          )}
         </Box>
       </Stack>
     </Paper>
+  );
+}
+
+function FocusPanel({
+  certId,
+  cert,
+  done,
+}: {
+  certId: string;
+  cert: Certification;
+  done: Record<string, boolean>;
+}) {
+  const focus = collectDomainFocus(certId, cert, done);
+  const nextWeek = firstIncompleteWeek(certId, cert, done);
+  if (focus.length === 0) {
+    return (
+      <Alert severity="success" sx={{ mb: 2 }}>
+        Guía completada: todos los puntos marcados. 🎉
+      </Alert>
+    );
+  }
+  return (
+    <Paper variant="outlined" sx={{ p: 2, mb: 2 }}>
+      <Stack direction="row" spacing={1} sx={{ mb: 1, alignItems: "center" }}>
+        <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
+          Foco sugerido
+        </Typography>
+        {nextWeek !== null && (
+          <Chip size="small" color="primary" label={`Continúa en Semana ${nextWeek}`} />
+        )}
+      </Stack>
+      <Stack spacing={1}>
+        {focus.slice(0, 3).map((f) => (
+          <Box key={f.domain}>
+            <Typography variant="body2">
+              {f.domain}{" "}
+              <Typography component="span" variant="caption" color="text.secondary">
+                · {f.weight}% · {f.total - f.remaining}/{f.total}
+              </Typography>
+            </Typography>
+            <LinearProgress
+              variant="determinate"
+              value={f.total ? ((f.total - f.remaining) / f.total) * 100 : 0}
+              sx={{ height: 6, borderRadius: 3 }}
+            />
+          </Box>
+        ))}
+      </Stack>
+    </Paper>
+  );
+}
+
+function CheatsheetPrint({ cert }: { cert: Certification }) {
+  const [open, setOpen] = useState(false);
+  const groups = compileCheatsheet(cert);
+  return (
+    <Box sx={{ mb: 2 }} className="cheatsheet-print">
+      <Button size="small" variant="outlined" onClick={() => setOpen((v) => !v)} className="print-hide">
+        {open ? "Ocultar chuleta" : "Ver chuleta imprimible"}
+      </Button>
+      {open && (
+        <Paper variant="outlined" sx={{ p: 2, mt: 1 }}>
+          <Stack
+            direction="row"
+            spacing={1}
+            sx={{ mb: 1, alignItems: "center", justifyContent: "space-between" }}
+            className="print-hide"
+          >
+            <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
+              Chuleta · {cert.code}
+            </Typography>
+            <Button size="small" onClick={() => window.print()}>
+              Imprimir / PDF
+            </Button>
+          </Stack>
+          {groups.map((g) => (
+            <Box key={g.domain} sx={{ mb: 1.5 }}>
+              <Typography variant="subtitle2">
+                {g.domain}
+                {g.weight > 0 ? ` · ${g.weight}%` : ""}
+              </Typography>
+              <ul style={{ margin: "4px 0", paddingLeft: 20 }}>
+                {g.points.map((p, i) => (
+                  <li key={i}>
+                    <Typography variant="body2">{p}</Typography>
+                  </li>
+                ))}
+              </ul>
+            </Box>
+          ))}
+        </Paper>
+      )}
+    </Box>
   );
 }
 
@@ -488,6 +628,10 @@ const StudyGuide = forwardRef<StudyGuideHandle, StudyGuideProps>(function StudyG
               </Typography>
 
               <CertificationMetaPanel cert={cert} />
+
+              <FocusPanel certId={cert.id} cert={cert} done={done} />
+
+              <CheatsheetPrint cert={cert} />
 
               <Grid container spacing={2} sx={{ mb: 2 }}>
                 <Grid size={{ xs: 12, sm: 6, md: 3 }}>
